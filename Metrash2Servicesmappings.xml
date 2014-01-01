@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application id="Metrash2Services" name="Metrash2Services">
+    <container displayname="Popup" id="headerFrmLang" type="dialog"/>
+    <container displayname="Popup" id="headerMainMenu" type="dialog"/>
+    <container displayname="Popup" id="headerResidencyMenu" type="dialog"/>
+    <container displayname="Popup" id="headerfrmLogin" type="dialog"/>
+    <container displayname="Form" id="frmActivation" type="form">
+        <component displayname="TextBox2" id="textbox223461054498395" type="textbox2"/>
+        <component displayname="TextBox2" id="textbox223461054498398" type="textbox2"/>
+        <component displayname="TextBox2" id="textbox223461054498400" type="textbox2"/>
+        <component displayname="TextBox2" id="textbox223461054498409" type="textbox2"/>
+        <component displayname="TextBox2" id="textbox223461054498411" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmLanguageSelect" type="form"/>
+    <container displayname="Form" id="frmLoginNew" type="form">
+        <component displayname="TextBox2" id="txtQID" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmMainMenu" type="form"/>
+    <container displayname="Form" id="frmPersonalResidencyDetails" type="form"/>
+    <container displayname="Form" id="frmPersonalResidencyResult" type="form"/>
+    <container displayname="Form" id="frmResidencyMenu" type="form"/>
+    <container displayname="Form" id="frmPersonalResidencyInput" type="form"/>
+    <container displayname="Form" id="frmResidencyPayment" type="form">
+        <component displayname="ListBox" id="lbCardType" type="listbox"/>
+        <component displayname="TextBox2" id="tbCardNumber" type="textbox2"/>
+        <component displayname="TextBox2" id="tbHolderName" type="textbox2"/>
+        <component displayname="Calendar" id="calExpiryDate" type="calendar"/>
+        <component displayname="TextBox2" id="tbCVV" type="textbox2"/>
+    </container>
+    <globalsequences/>
+    <skins/>
+</application>

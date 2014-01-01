@@ -1,0 +1,89 @@
+<application desc="" id="Metrash2Ra" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="authentication" passwordencrypted="true" smscode="" smsenabled="false" type="jsonConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://172.20.44.162:8080/Metrash2/rest/metrash2/webServiceCredentials?lang=en"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="http.method" value="POST"/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="true"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input/>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="userName" sms-name="" src="userName" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="password" sms-name="" src="password" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="payment" passwordencrypted="true" smscode="" smsenabled="false" type="jsonConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://172.20.44.162:8080/Metrash2/rest/metrash2/metrash2Payment?clientQid=$clientQid&amp;serviceId=$serviceId&amp;totalAmount=$totalAmount&amp;expirationdate=$expirationdate&amp;ccnumber=$ccnumber&amp;holdername=$holdername&amp;cctype=$cctype&amp;cvv2=$cvv2&amp;lang=en"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="http.method" value="POST"/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <param datatype="string" encode="true" name="clientQid" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="serviceId" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="totalAmount" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="expirationdate" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="ccnumber" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="holdername" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="cctype" sms-name="" src="request" value=""/>
+            <param datatype="string" encode="true" name="cvv2" sms-name="" src="request" value=""/>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="errorCode" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="cardOwnerId" sms-name="" src="//cardOwnerId" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="cardExpDate" sms-name="" src="//cardExpDate" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="pgmId" sms-name="" src="//pgmId" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="systemName" sms-name="" src="//systemName" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="afsDeptCode" sms-name="" src="//afsDeptCode" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="merchTxnRef" sms-name="" src="//merchTxnRef" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="cardType" sms-name="" src="//cardType" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="afsSecCode" sms-name="" src="//afsSecCode" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="termId" sms-name="" src="//termId" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="cardOwnerName" sms-name="" src="//cardOwnerName" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="userId" sms-name="" src="//userId" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="totalAmount" sms-name="" src="//totalAmount" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="refNo" sms-name="" src="//refNo" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="systemId" sms-name="" src="//systemId" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="transactionNo" sms-name="" src="//transactionNo" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="authUsrId" sms-name="" src="//authUsrId" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="cardNumber" sms-name="" src="//cardNumber" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="systemName" sms-name="" src="//systemName" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>

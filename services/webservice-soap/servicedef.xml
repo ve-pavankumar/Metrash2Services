@@ -1,0 +1,184 @@
+<application desc="" id="Metrash2Ra" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="getEligibleSposoredListForRenewRPForPersonal" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://tst.moi.gov.qa:81/RP3_WS_EJB_HTTPRouter/ResidenceBeanWSService"/>
+            <config-param name="soapAction" value=""/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="true"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:ses=&quot;http://session.rp3.moi.gov.qa/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header&gt;&lt;wsse:Security xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&lt;wsse:UsernameToken&gt;&lt;wsse:Username&gt;$userName&lt;/wsse:Username&gt;&lt;wsse:Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;$password&lt;/wsse:Password&gt;&lt;/wsse:UsernameToken&gt;&lt;/wsse:Security&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ses:getEligibleSposoredListForRenewRPForPersonal&gt;&lt;!--Optional:--&gt;&lt;arg0&gt;$qid&lt;/arg0&gt;&lt;!--Zero or more repetitions:--&gt;&lt;/ses:getEligibleSposoredListForRenewRPForPersonal&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="qid" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="sponserDetails" src="//return">
+               <param datatype="string" format="None" formatvalue="" name="arabicName" sms-name="" src="sponsoredDetails/arabicName" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="engName" sms-name="" src="sponsoredDetails/englishName" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="expiryDate" sms-name="" src="sponsoredDetails/rpExpiryDate" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="qid" sms-name="" src="sponsoredDetails/qidNum" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="nationalityEng" sms-name="" src="sponsoredDetails/natEnglishDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="nationalityAr" sms-name="" src="sponsoredDetails/natArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="relationEng" sms-name="" src="sponsoredDetails/relationEnglishDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="relationAr" sms-name="" src="sponsoredDetails/relationArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="sexEng" sms-name="" src="sponsoredDetails/sexEnglishDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="sexAr" sms-name="" src="sponsoredDetails/sexArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="maxAllowDuration" sms-name="" src="sponsoredDetails/maxAllowedDurForRenew" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="renewPeriod" sms-name="" src="sponsoredDetails/renewalPeriod" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="renewFees" sms-name="" src="sponsoredDetails/renewFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="workFees" sms-name="" src="sponsoredDetails/workFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="cancelFees" sms-name="" src="sponsoredDetails/cancelFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="cardFees" sms-name="" src="sponsoredDetails/cardFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="delayFees" sms-name="" src="sponsoredDetails/delayFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportNum" sms-name="" src="sponsoredDetails/passportNum" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="exitPermitFees" sms-name="" src="sponsoredDetails/exitPermitFees" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="errCode" sms-name="" src="//errorCode" srcformatvalue="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="errMsg" sms-name="" src="//errorMessage" srcformatvalue="" target="response"/>
+            <dataset id="sponserDetailsBulk" src="//return">
+               <param datatype="string" format="None" formatvalue="" name="arabicNamearabicName" sms-name="" src="sponsoredDetails/arabicName" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="arbName1" sms-name="" src="sponsoredDetails/arbName1" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="arbName2" sms-name="" src="sponsoredDetails/arbName2" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="arbName3" sms-name="" src="sponsoredDetails/arbName3" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="arbName4" sms-name="" src="sponsoredDetails/arbName4" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="arbName5" sms-name="" src="sponsoredDetails/arbName5" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="cancelFees" sms-name="" src="sponsoredDetails/cancelFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="cardFees" sms-name="" src="sponsoredDetails/cardFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="dateOfBirth" sms-name="" src="sponsoredDetails/dateOfBirth" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="delayFees" sms-name="" src="sponsoredDetails/delayFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="engName1" sms-name="" src="sponsoredDetails/engName1" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="engName2" sms-name="" src="sponsoredDetails/engName2" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="engName3" sms-name="" src="sponsoredDetails/engName3" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="engName4" sms-name="" src="sponsoredDetails/engName4" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="engName5" sms-name="" src="sponsoredDetails/engName5" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="englishName" sms-name="" src="sponsoredDetails/englishName" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="exitEntryDate" sms-name="" src="sponsoredDetails/exitEntryDate" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="exitEntryInd" sms-name="" src="sponsoredDetails/exitEntryInd" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="exitPermitFees" sms-name="" src="sponsoredDetails/exitPermitFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="feeIndicator" sms-name="" src="sponsoredDetails/feeIndicator" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="fullName" sms-name="" src="sponsoredDetails/fullName" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="maxAllowedDurForRenew" sms-name="" src="sponsoredDetails/maxAllowedDurForRenew" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="natArabicDesc" sms-name="" src="sponsoredDetails/natArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="natCode" sms-name="" src="sponsoredDetails/natCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="natEnglishDesc" sms-name="" src="sponsoredDetails/natEnglishDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="numAccompanies" sms-name="" src="sponsoredDetails/numAccompanies" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportExpiryDate" sms-name="" src="sponsoredDetails/passportExpiryDate" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportIssuePlace" sms-name="" src="sponsoredDetails/passportIssuePlace" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportNatArabicDesc" sms-name="" src="sponsoredDetails/passportNatArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportNatCode" sms-name="" src="sponsoredDetails/passportNatCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportNatEngDesc" sms-name="" src="sponsoredDetails/passportNatEngDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportNum" sms-name="" src="sponsoredDetails/passportNum" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportOwnIndicator" sms-name="" src="sponsoredDetails/passportOwnIndicator" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportType" sms-name="" src="sponsoredDetails/passportType" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="passportissueDate" sms-name="" src="sponsoredDetails/passportissueDate" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="personType" sms-name="" src="sponsoredDetails/personType" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="professionArabicDesc" sms-name="" src="sponsoredDetails/professionArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="professionCode" sms-name="" src="sponsoredDetails/professionCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="professionCode" sms-name="" src="sponsoredDetails/professionCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="qidNum" sms-name="" src="sponsoredDetails/qidNum" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="relationArabicDesc" sms-name="" src="sponsoredDetails/relationArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="relationCode" sms-name="" src="sponsoredDetails/relationCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="relationEnglishDesc" sms-name="" src="sponsoredDetails/relationEnglishDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="renewFees" sms-name="" src="sponsoredDetails/renewFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="renewalPeriod" sms-name="" src="sponsoredDetails/renewalPeriod" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="rpExpiryDate" sms-name="" src="sponsoredDetails/rpExpiryDate" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="sexArabicDesc" sms-name="" src="sponsoredDetails/sexArabicDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="sexCode" sms-name="" src="sponsoredDetails/sexCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="sexEnglishDesc" sms-name="" src="sponsoredDetails/sexEnglishDesc" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="statusCode" sms-name="" src="sponsoredDetails/statusCode" srcformatvalue="" target="response"/>
+            </dataset>
+            <dataset id="deliveryDetails" src="//return">
+               <param datatype="string" format="None" formatvalue="" name="deliveryFee" sms-name="" src="deliveryDetails[1]/deliveryFee" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="deliveryOptionID" sms-name="" src="deliveryDetails[1]/deliveryOptionID" srcformatvalue="" target="response"/>
+            </dataset>
+            <dataset id="deliveryDetailsDTO" src="//return">
+               <param datatype="string" format="None" formatvalue="" name="applierQID" sms-name="" src="deliveryDetails[2]/applierQID" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="carrier" sms-name="" src="deliveryDetails[2]/carrier" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="deliveryFee" sms-name="" src="deliveryDetails[2]/deliveryFee" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="deliveryOptionID" sms-name="" src="deliveryDetails[2]/deliveryOptionID" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="departmentType" sms-name="" src="deliveryDetails[2]/departmentType" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="functionCode" sms-name="" src="deliveryDetails[2]/functionCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="receivingType" sms-name="" src="deliveryDetails[2]/receivingType" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="returnOldDocument" sms-name="" src="deliveryDetails[2]/returnOldDocument" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="sourceType" sms-name="" src="deliveryDetails[2]/sourceType" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="renewResidencePermit" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://tst.moi.gov.qa:81/RP3_WS_EJB_HTTPRouter/ResidenceBeanWSService"/>
+            <config-param name="soapAction" value=""/>
+            <config-param name="userid" value="MICSBCN"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="kgm8yZAr63/dxJJd/USGTA=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:ses=&quot;http://session.rp3.moi.gov.qa/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header&gt;&lt;wsse:Security xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&lt;wsse:UsernameToken&gt;&lt;wsse:Username&gt;$userName&lt;/wsse:Username&gt;&lt;wsse:Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;$password&lt;/wsse:Password&gt;&lt;/wsse:UsernameToken&gt;&lt;/wsse:Security&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ses:renewResidencePermit&gt;&lt;!--Optional:--&gt;&lt;arg0&gt;$qid&lt;/arg0&gt;&lt;!--Zero or more repetitions:--&gt;#foreach $sponserDetailsBulk &lt;arg1&gt;&lt;!--Optional:--&gt;&lt;arabicName&gt;$arabicName&lt;/arabicName&gt;&lt;!--Optional:--&gt;&lt;arbName1&gt;$arbName1&lt;/arbName1&gt;&lt;!--Optional:--&gt;&lt;arbName2&gt;$arbName2&lt;/arbName2&gt;&lt;!--Optional:--&gt;&lt;arbName3&gt;$arbName3&lt;/arbName3&gt;&lt;!--Optional:--&gt;&lt;arbName4&gt;$arbName4&lt;/arbName4&gt;&lt;!--Optional:--&gt;&lt;arbName5&gt;$arbName5&lt;/arbName5&gt;&lt;cancelFees&gt;$cancelFees&lt;/cancelFees&gt;&lt;cardFees&gt;$cardFees&lt;/cardFees&gt;&lt;!--Optional:--&gt;&lt;dateOfBirth&gt;$dateOfBirth&lt;/dateOfBirth&gt;&lt;delayFees&gt;$delayFees&lt;/delayFees&gt;&lt;!--Optional:--&gt;&lt;engName1&gt;$engName1&lt;/engName1&gt;&lt;!--Optional:--&gt;&lt;engName2&gt;$engName2&lt;/engName2&gt;&lt;!--Optional:--&gt;&lt;engName3&gt;$engName3&lt;/engName3&gt;&lt;!--Optional:--&gt;&lt;engName4&gt;$engName4&lt;/engName4&gt;&lt;!--Optional:--&gt;&lt;engName5&gt;$engName5&lt;/engName5&gt;&lt;!--Optional:--&gt;&lt;englishName&gt;$englishName&lt;/englishName&gt;&lt;!--Optional:--&gt;&lt;exitEntryDate&gt;$exitEntryDate&lt;/exitEntryDate&gt;&lt;!--Optional:--&gt;&lt;exitEntryInd&gt;$exitEntryInd&lt;/exitEntryInd&gt;&lt;exitPermitFees&gt;$exitPermitFees&lt;/exitPermitFees&gt;&lt;!--Optional:--&gt;&lt;feeIndicator&gt;$feeIndicator&lt;/feeIndicator&gt;&lt;!--Optional:--&gt;&lt;fullName&gt;$fullName&lt;/fullName&gt;&lt;maxAllowedDurForRenew&gt;$maxAllowedDurForRenew&lt;/maxAllowedDurForRenew&gt;&lt;!--Optional:--&gt;&lt;natArabicDesc&gt;$natArabicDesc&lt;/natArabicDesc&gt;&lt;!--Optional:--&gt;&lt;natCode&gt;$natCode&lt;/natCode&gt;&lt;!--Optional:--&gt;&lt;natEnglishDesc&gt;$natEnglishDesc&lt;/natEnglishDesc&gt;&lt;!--Optional:--&gt;&lt;numAccompanies&gt;$numAccompanies&lt;/numAccompanies&gt;&lt;!--Optional:--&gt;&lt;passportExpiryDate&gt;$passportExpiryDate&lt;/passportExpiryDate&gt;&lt;!--Optional:--&gt;&lt;passportIssuePlace&gt;$passportIssuePlace&lt;/passportIssuePlace&gt;&lt;!--Optional:--&gt;&lt;passportNatArabicDesc&gt;$passportNatArabicDesc&lt;/passportNatArabicDesc&gt;&lt;!--Optional:--&gt;&lt;passportNatCode&gt;$passportNatCode&lt;/passportNatCode&gt;&lt;!--Optional:--&gt;&lt;passportNatEngDesc&gt;$passportNatEngDesc&lt;/passportNatEngDesc&gt;&lt;!--Optional:--&gt;&lt;passportNum&gt;$passportNum&lt;/passportNum&gt;&lt;!--Optional:--&gt;&lt;passportOwnIndicator&gt;$passportOwnIndicator&lt;/passportOwnIndicator&gt;&lt;!--Optional:--&gt;&lt;passportType&gt;$passportType&lt;/passportType&gt;&lt;!--Optional:--&gt;&lt;passportissueDate&gt;$passportissueDate&lt;/passportissueDate&gt;&lt;!--Optional:--&gt;&lt;personType&gt;$personType&lt;/personType&gt;&lt;!--Optional:--&gt;&lt;professionArabicDesc&gt;$professionArabicDesc&lt;/professionArabicDesc&gt;&lt;!--Optional:--&gt;&lt;professionCode&gt;$professionCode&lt;/professionCode&gt;&lt;!--Optional:--&gt;&lt;professionEnglishDesc&gt;$professionEnglishDesc&lt;/professionEnglishDesc&gt;&lt;!--Optional:--&gt;&lt;qidNum&gt;$qidNum&lt;/qidNum&gt;&lt;!--Optional:--&gt;&lt;rejectionReasonArabic&gt;$rejectionReasonArabic&lt;/rejectionReasonArabic&gt;&lt;!--Optional:--&gt;&lt;rejectionReasonCode&gt;$rejectionReasonCode&lt;/rejectionReasonCode&gt;&lt;!--Optional:--&gt;&lt;rejectionReasonEnglish&gt;$rejectionReasonEnglish&lt;/rejectionReasonEnglish&gt;&lt;!--Optional:--&gt;&lt;relationArabicDesc&gt;$relationArabicDesc&lt;/relationArabicDesc&gt;&lt;!--Optional:--&gt;&lt;relationCode&gt;$relationCode&lt;/relationCode&gt;&lt;!--Optional:--&gt;&lt;relationEnglishDesc&gt;$relationEnglishDesc&lt;/relationEnglishDesc&gt;&lt;renewFees&gt;$renewFees&lt;/renewFees&gt;&lt;!--Optional:--&gt;&lt;renewalPeriod&gt;$renewalPeriod&lt;/renewalPeriod&gt;&lt;!--Optional:--&gt;&lt;rpExpiryDate&gt;$rpExpiryDate&lt;/rpExpiryDate&gt;&lt;!--Optional:--&gt;&lt;sexArabicDesc&gt;$sexArabicDesc&lt;/sexArabicDesc&gt;&lt;!--Optional:--&gt;&lt;sexCode&gt;$sexCode&lt;/sexCode&gt;&lt;!--Optional:--&gt;&lt;sexEnglishDesc&gt;$sexEnglishDesc&lt;/sexEnglishDesc&gt;&lt;!--Optional:--&gt;&lt;statusCode&gt;$statusCode&lt;/statusCode&gt;&lt;workFees&gt;$workFees&lt;/workFees&gt;&lt;/arg1&gt;#end &lt;!--Optional:--&gt;&lt;arg2&gt;$userId&lt;/arg2&gt;&lt;!--Optional:--&gt;&lt;arg3&gt;$ipAddress&lt;/arg3&gt;&lt;!--Optional:--&gt;&lt;arg4&gt;$systemName&lt;/arg4&gt;&lt;!--Optional:--&gt;&lt;arg5&gt;&lt;!--Optional:--&gt;&lt;afsDeptCode&gt;$afsDeptCode&lt;/afsDeptCode&gt;&lt;!--Optional:--&gt;&lt;afsSecCode&gt;$afsSecCode&lt;/afsSecCode&gt;&lt;!--Optional:--&gt;&lt;authUsrId&gt;$authUsrId&lt;/authUsrId&gt;&lt;!--Optional:--&gt;&lt;cardExpDate&gt;$cardExpDate&lt;/cardExpDate&gt;&lt;!--Optional:--&gt;&lt;cardNumber&gt;$cardNumber&lt;/cardNumber&gt;&lt;!--Optional:--&gt;&lt;cardOwnerId&gt;$cardOwnerId&lt;/cardOwnerId&gt;&lt;!--Optional:--&gt;&lt;cardOwnerName&gt;$cardOwnerName&lt;/cardOwnerName&gt;&lt;!--Optional:--&gt;&lt;cardType&gt;$cardType&lt;/cardType&gt;&lt;!--Optional:--&gt;&lt;pgmId&gt;$pgmId&lt;/pgmId&gt;&lt;!--Optional:--&gt;&lt;refNo&gt;$refNo&lt;/refNo&gt;&lt;!--Optional:--&gt;&lt;systemId&gt;$systemId&lt;/systemId&gt;&lt;!--Optional:--&gt;&lt;termId&gt;$termId&lt;/termId&gt;&lt;totalAmount&gt;$totalAmount&lt;/totalAmount&gt;&lt;/arg5&gt;&lt;/ses:renewResidencePermit&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="qid" sms-name="" src="request" value=""/>
+               <param datatype="collection" encode="true" name="sponserDetailsBulk" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="ipAddress" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="systemName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="totalAmount" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="afsDeptCode" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="afsSecCode" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="authUsrId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cardExpDate" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cardNumber" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cardOwnerId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cardOwnerName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cardType" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="pgmId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="refNo" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="systemId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="termId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="totalAmount" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userId" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>

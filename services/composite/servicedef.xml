@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application desc="" id="Metrash2Ra" name="" smscode="">
+    <app-config/>
+    <services>
+        <service serviceGroup="" cachable="false" cacheduration="" groupType="" id="RecidencyRenwalComposite" type="CompositeConnector" smscode="" smsenabled="false">
+            <service-config>
+                <config-param name="exec_type" value="Sequential"/>
+                <config-param name="service" value="authentication"/>
+                <config-param name="service" value="payment"/>
+                <config-param name="service" value="renewResidencePermit"/>
+            </service-config>
+            <service-input/>
+            <service-output/>
+        </service>
+        <service serviceGroup="" cachable="false" cacheduration="" groupType="" id="residencyComposite" type="CompositeConnector" smscode="" smsenabled="false">
+            <service-config>
+                <config-param name="exec_type" value="Sequential"/>
+                <config-param name="service" value="authentication"/>
+                <config-param name="service" value="getEligibleSposoredListForRenewRPForPersonal"/>
+                <config-param name="postprocessorname" value=""/>
+            </service-config>
+            <service-input/>
+            <service-output/>
+        </service>
+    </services>
+</application>
