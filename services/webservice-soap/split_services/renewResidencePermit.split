@@ -466,7 +466,7 @@
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source></source>
+            <source>request</source>
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>

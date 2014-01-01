@@ -26,11 +26,13 @@ function residencyServiceCallbackFunction(status, output) {
             if (null != sponserDetails && sponserDetails.length > 0) {
                 recidencyrenwalObject.sponsorDTOforRecidencyRenewal = output.sponserDetailsBulk || [];
                 //recidencyrenwalObject.DeliveryDetailsDTO=output["deliveryDetailsDTO"][0] ||[];
+                mapSponsorDetailsOnDisplay(output["sponsorEnglishName"], output["sponsorArabicName"], output["sponsorQidNum"]);
                 var sponserDetailsArray = []; //Array
                 for (var sponser in sponserDetails) {
                     sponserDetails[sponser]["renewPeriod"] = sponserDetails[sponser]["renewPeriod"] || "1";
                     kony.print("Year Value" + sponserDetails[sponser]["renewPeriod"]);
                     recidencyrenwalObject.qid = sponserDetails[sponser]["qid"];
+                    var localeSpecificDisplayValues = getLocaleSpecificDisplayValuesForSponseredDataSet(sponserDetails[sponser]);
                     var segmentData = {
                         qid: sponserDetails[sponser]["qid"],
                         btnPersResCheckbox: {
@@ -38,13 +40,13 @@ function residencyServiceCallbackFunction(status, output) {
                         },
                         lblQID: sponserDetails[sponser]["qid"],
                         lblExpiryDate: sponserDetails[sponser]["expiryDate"],
-                        lblName: sponserDetails[sponser]["engName"],
+                        lblName: localeSpecificDisplayValues["name"],
                         btnPersResDetails: "test",
                         btnYear: sponserDetails[sponser]["renewPeriod"],
                         clickedInfo: "0",
-                        nationality: sponserDetails[sponser]["nationalityEng"],
-                        relation: sponserDetails[sponser]["relationEng"],
-                        sex: sponserDetails[sponser]["sexEng"],
+                        nationality: localeSpecificDisplayValues["nationality"],
+                        relation: localeSpecificDisplayValues["relation"],
+                        sex: localeSpecificDisplayValues["sex"],
                         dob: "",
                         age: "",
                         residencyDate: "",
@@ -182,4 +184,38 @@ function refreshTotalAmount() {
 function residencyPaymentPostShow() {
     frmResidencyPayment.calExpiryDate.dateFormat = "mm/YY";
     frmResidencyPayment.lblAmountValue.text = recidencyrenwalObject.totalAmount;
+}
+
+function getLocaleSpecificDisplayValuesForSponseredDataSet(dataSet) {
+    var locale = "ar_QR";
+    var LocaleSpecificDisplayValues = [];
+    if (locale == "ar_QR") {
+        LocaleSpecificDisplayValues["name"] = dataSet["arabicName"];
+        LocaleSpecificDisplayValues["nationality"] = dataSet["nationalityAr"];
+        LocaleSpecificDisplayValues["relation"] = dataSet["relationAr"];
+        LocaleSpecificDisplayValues["sex"] = dataSet["sexAr"];
+    } else if (locale = "en_QR") {
+        LocaleSpecificDisplayValues["name"] = dataSet["engName"];
+        LocaleSpecificDisplayValues["nationality"] = dataSet["nationalityEng"];
+        LocaleSpecificDisplayValues["relation"] = dataSet["relationEng"];
+        LocaleSpecificDisplayValues["sex"] = dataSet["sexEng"];
+    }
+    return LocaleSpecificDisplayValues;
+}
+
+function getLocaleSpecificDisplayValuesForSponsor(engName, arabicName) {
+    var locale = "ar_QR";
+    var name = "";
+    if (locale == "ar_QR") {
+        name = arabicName;
+    } else if (locale = "en_QR") {
+        name = engName;
+    }
+    return name;
+}
+
+function mapSponsorDetailsOnDisplay(engName, arabicName, qid) {
+    var name = getLocaleSpecificDisplayValuesForSponsor(engName, arabicName);
+    frmPersonalResidencyInput.lblSponsorQID.text = qid;
+    frmPersonalResidencyInput.lblSponsorName.text = name;
 }

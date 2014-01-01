@@ -122,6 +122,9 @@
                <param datatype="string" format="None" formatvalue="" name="returnOldDocument" sms-name="" src="deliveryDetails[2]/returnOldDocument" srcformatvalue="" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="sourceType" sms-name="" src="deliveryDetails[2]/sourceType" srcformatvalue="" target="response"/>
             </dataset>
+            <param datatype="string" format="None" formatvalue="" name="sponsorArabicName" sms-name="" src="//return/sponsorArabicName" srcformatvalue="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="sponsorEnglishName" sms-name="" src="//return/sponsorEnglishName" srcformatvalue="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="sponsorQidNum" sms-name="" src="//return/sponsorQidNum" srcformatvalue="" target="response"/>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
             <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
@@ -171,7 +174,7 @@
                <param datatype="string" encode="true" name="systemId" sms-name="" src="request" value=""/>
                <param datatype="string" encode="true" name="termId" sms-name="" src="request" value=""/>
                <param datatype="string" encode="true" name="totalAmount" sms-name="" src="request" value=""/>
-               <param datatype="string" encode="true" name="userId" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="userId" sms-name="" src="request" value=""/>
             </template-param>
          </service-input>
          <service-output>
