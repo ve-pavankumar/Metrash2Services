@@ -1,4 +1,8 @@
 //Form JS File
+function frmPersonalResidencyResult_frmPersonalResidencyResult_postshow_seq0(eventobject, neworientation) {
+    PersonalResidencyResultPostShow.call(this);
+};
+
 function frmPersonalResidencyResult_btnPersResidencyDone_onClick_seq0(eventobject) {
     frmResidencyMenu.show();
 };
@@ -22,8 +26,8 @@ function addWidgetsfrmPersonalResidencyResult() {
     }, {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
-    var lblQid = new kony.ui.Label({
-        "id": "lblQid",
+    var lblSponsorQID = new kony.ui.Label({
+        "id": "lblSponsorQID",
         "isVisible": true,
         "text": "12345678901",
         "skin": "lblBlackNor"
@@ -57,9 +61,9 @@ function addWidgetsfrmPersonalResidencyResult() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox195327310675877.add(
-    label195327310678167, lblQid);
-    var lblUsername = new kony.ui.Label({
-        "id": "lblUsername",
+    label195327310678167, lblSponsorQID);
+    var lblSponsorName = new kony.ui.Label({
+        "id": "lblSponsorName",
         "isVisible": true,
         "text": "TMAM IBRAHIM AL HAMAD",
         "skin": "lblBlackNor"
@@ -93,7 +97,7 @@ function addWidgetsfrmPersonalResidencyResult() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox195327310677286.add(
-    lblUsername);
+    lblSponsorName);
     var vbox195327310673732 = new kony.ui.Box({
         "id": "vbox195327310673732",
         "isVisible": true,
@@ -436,6 +440,7 @@ function frmPersonalResidencyResultGlobals() {
         "headers": [hbox3323200773],
         "enabledForIdleTimeout": false,
         "skin": "frmBg",
+        "postShow": frmPersonalResidencyResult_frmPersonalResidencyResult_postshow_seq0,
         "addWidgets": addWidgetsfrmPersonalResidencyResult
     }, {
         "padding": [0, 0, 0, 0],

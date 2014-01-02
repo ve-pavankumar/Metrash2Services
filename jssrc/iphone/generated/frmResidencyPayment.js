@@ -52,7 +52,7 @@ function addWidgetsfrmResidencyPayment() {
     var lblAmountValue = new kony.ui.Label({
         "id": "lblAmountValue",
         "isVisible": true,
-        "text": "2200.00",
+        "text": "0.00",
         "skin": "lblBlackBold"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
@@ -251,33 +251,112 @@ function addWidgetsfrmResidencyPayment() {
     }, {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
-    var calExpiryDate = new kony.ui.Calendar({
-        "id": "calExpiryDate",
+    var cmbMonth = new kony.ui.ComboBox({
+        "id": "cmbMonth",
         "isVisible": true,
-        "dateFormat": "dd/MM/yyyy",
-        "viewConfig": {
-            gridConfig: {
-                "allowWeekendSelectable": true
-            }
-        },
-        "placeholder": null,
-        "skin": "calNormal",
-        "focusSkin": "calFocus",
-        "viewType": constants.CALENDAR_VIEW_TYPE_WHEEL_POPUP,
-        "calendarIcon": null
+        "masterData": [
+            ["1", "JAN"],
+            ["2", "FEB"],
+            ["3", "MAR"],
+            ["4", "APR"],
+            ["5", "MAY"],
+            ["6", "JUN"],
+            ["7", "JUL"],
+            ["8", "AUG"],
+            ["9", "SEP"],
+            ["10", "OCT"],
+            ["11", "NOV"],
+            ["12", "DEC"]
+        ],
+        "skin": "cboxNormal",
+        "focusSkin": "cboxFocus"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 0, 7, 0],
+        "margin": [1, 1, 1, 1],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "marginInPixel": true,
         "paddingInPixel": false,
-        "containerWeight": 6
+        "containerWeight": 100
     }, {
-        "mode": constants.CALENDAR_WHEEL_ONLY_DATE
+        "viewType": constants.COMBOBOX_VIEW_TYPE_LISTVIEW,
+        "placeholder": "month",
+        "dropDownImage": null
     });
+    var vbox1957257644836 = new kony.ui.Box({
+        "id": "vbox1957257644836",
+        "isVisible": true,
+        "orientation": constants.BOX_LAYOUT_VERTICAL
+    }, {
+        "containerWeight": 50,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "vExpand": false,
+        "hExpand": true,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    vbox1957257644836.add(
+    cmbMonth);
+    var cmbYear = new kony.ui.ComboBox({
+        "id": "cmbYear",
+        "isVisible": true,
+        "skin": "cboxNormal",
+        "focusSkin": "cboxFocus"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [1, 1, 1, 1],
+        "padding": [0, 1, 0, 1],
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "marginInPixel": true,
+        "paddingInPixel": false,
+        "containerWeight": 100
+    }, {
+        "viewType": constants.COMBOBOX_VIEW_TYPE_LISTVIEW,
+        "placeholder": "year",
+        "dropDownImage": null
+    });
+    var vbox1957257644837 = new kony.ui.Box({
+        "id": "vbox1957257644837",
+        "isVisible": true,
+        "orientation": constants.BOX_LAYOUT_VERTICAL
+    }, {
+        "containerWeight": 50,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "vExpand": false,
+        "hExpand": true,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    vbox1957257644837.add(
+    cmbYear);
+    var hbox1957257644835 = new kony.ui.Box({
+        "id": "hbox1957257644835",
+        "isVisible": true,
+        "position": constants.BOX_POSITION_AS_NORMAL,
+        "orientation": constants.BOX_LAYOUT_HORIZONTAL
+    }, {
+        "containerWeight": 6,
+        "percent": true,
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "vExpand": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    hbox1957257644835.add(
+    vbox1957257644836, vbox1957257644837);
     var lblCVV = new kony.ui.Label({
         "id": "lblCVV",
         "isVisible": true,
@@ -395,7 +474,7 @@ function addWidgetsfrmResidencyPayment() {
     hbox19284323084890.add(
     btnPersResPaymentBack, btnPersResPaymentSubmit);
     frmResidencyPayment.add(
-    lblCreditCardInfo, hboxAmount, lblCardType, lbCardType, lblCardNumber, tbCardNumber, lblHolderName, tbHolderName, lblExpiryDate, calExpiryDate, lblCVV, tbCVV, hbox19284323084890);
+    lblCreditCardInfo, hboxAmount, lblCardType, lbCardType, lblCardNumber, tbCardNumber, lblHolderName, tbHolderName, lblExpiryDate, hbox1957257644835, lblCVV, tbCVV, hbox19284323084890);
 };
 
 function frmResidencyPaymentGlobals() {
@@ -420,7 +499,7 @@ function frmResidencyPaymentGlobals() {
         "formTransparencyDuringPostShow": "100",
         "inputAccessoryViewType": constants.FORM_INPUTACCESSORYVIEW_DEFAULT,
         "bounces": true,
-        "titleBar": true,
+        "titleBar": false,
         "footerOverlap": false,
         "headerOverlap": false,
         "inTransitionConfig": {

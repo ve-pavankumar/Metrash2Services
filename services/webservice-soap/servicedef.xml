@@ -52,6 +52,9 @@
                <param datatype="string" format="None" formatvalue="" name="delayFees" sms-name="" src="sponsoredDetails/delayFees" srcformatvalue="" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="passportNum" sms-name="" src="sponsoredDetails/passportNum" srcformatvalue="" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="exitPermitFees" sms-name="" src="sponsoredDetails/exitPermitFees" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="rejectionReasonArabic" sms-name="" src="sponsoredDetails/rejectionReasonArabic" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="rejectionReasonCode" sms-name="" src="sponsoredDetails/rejectionReasonCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="rejectionReasonEnglish" sms-name="" src="sponsoredDetails/rejectionReasonEnglish" srcformatvalue="" target="response"/>
             </dataset>
             <param datatype="string" format="None" formatvalue="" name="errCode" sms-name="" src="//errorCode" srcformatvalue="" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="errMsg" sms-name="" src="//errorMessage" srcformatvalue="" target="response"/>
@@ -178,6 +181,15 @@
             </template-param>
          </service-input>
          <service-output>
+            <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="//errorCode" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="//errorMessage" srcformatvalue="" target=""/>
+            <dataset id="responseSet" src="//return">
+               <param datatype="string" format="None" formatvalue="" name="duration" sms-name="" src="//duration" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="qidNum" sms-name="" src="//qidNum" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="residentArabicName" sms-name="" src="//residentArabicName" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="residentEnglishName" sms-name="" src="//residentEnglishName" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="rpExpiryDate" sms-name="" src="//rpExpiryDate" srcformatvalue="" target=""/>
+            </dataset>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
             <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>

@@ -3409,6 +3409,72 @@
             <testvalue></testvalue>
             <value></value>
         </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>rejectionReasonArabic</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>sponsoredDetails/rejectionReasonArabic</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>sponserDetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>rejectionReasonCode</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>sponsoredDetails/rejectionReasonCode</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>sponserDetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>rejectionReasonEnglish</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>sponsoredDetails/rejectionReasonEnglish</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>sponserDetails</value>
+        </outparam>
         <password></password>
         <postclassname></postclassname>
         <preclassname></preclassname>

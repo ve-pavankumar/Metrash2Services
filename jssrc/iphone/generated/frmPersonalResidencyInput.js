@@ -1,18 +1,6 @@
 //Form JS File
-function frmPersonalResidencyInput_btnPersResCheckbox_onClick_seq0(eventobject, context) {
-    checkboxClicked.call(this);
-};
-
 function frmPersonalResidencyInput_btnYear_onClick_seq0(eventobject, context) {
     yearButtonClicked.call(this);
-};
-
-function frmPersonalResidencyInput_btnPersResDetails_onClick_seq0(eventobject, context) {
-    frmPersonalResidencyDetails.show();
-    /* 
-detailsIconClicked.call(this);
-
- */
 };
 
 function frmPersonalResidencyInput_btnPersResInputBack_onClick_seq0(eventobject) {
@@ -311,41 +299,47 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetDataMap": {
             "btnPersResDetails": "btnPersResDetails",
             "sex": "sex",
-            "workFees": "workFees",
+            "vbxPersResCheckbox": "vbxPersResCheckbox",
             "maxAllowDuration": "maxAllowDuration",
-            "qid": "qid",
-            "relation": "relation",
-            "btnYear": "btnYear",
-            "lblQID": "lblQID",
-            "lblName": "lblName",
-            "hbxTop": "hbxTop",
+            "workFees": "workFees",
             "renewFees": "renewFees",
-            "btnPersResCheckbox": "btnPersResCheckbox",
             "hbxBottom": "hbxBottom",
-            "lblExpiryDate": "lblExpiryDate",
+            "btnPersResCheckbox": "btnPersResCheckbox",
             "cancelFees": "cancelFees",
-            "nationality": "nationality",
             "residencyDate": "residencyDate",
-            "cardFees": "cardFees",
             "exitPermitFees": "exitPermitFees",
             "age": "age",
+            "vbxPersResDetails": "vbxPersResDetails",
+            "rejectionReason": "rejectionReason",
+            "qid": "qid",
+            "relation": "relation",
+            "rejectionReasonCode": "rejectionReasonCode",
+            "btnYear": "btnYear",
+            "lblName": "lblName",
+            "lblQID": "lblQID",
+            "hbxTop": "hbxTop",
+            "lblExpiryDate": "lblExpiryDate",
+            "nationality": "nationality",
+            "cardFees": "cardFees",
             "dob": "dob",
             "clickedInfo": "clickedInfo",
             "delayFees": "delayFees",
             "PassportNo": "PassportNo"
         },
         "data": [{
-            "btnPersResDetails": "test",
+            "rejectionReason": "",
+            "btnPersResDetails": "",
             "sex": "",
             "workFees": "",
             "maxAllowDuration": "",
             "qid": "",
             "relation": "",
+            "rejectionReasonCode": "",
             "btnYear": "1",
             "lblQID": "24373657525",
             "lblName": "Wajiha Rabia Parera",
             "renewFees": "",
-            "btnPersResCheckbox": "test",
+            "btnPersResCheckbox": "",
             "lblExpiryDate": "2013-01-01",
             "cancelFees": "",
             "nationality": "",
@@ -358,17 +352,19 @@ function addWidgetsfrmPersonalResidencyInput() {
             "delayFees": "",
             "PassportNo": ""
         }, {
-            "btnPersResDetails": "test",
+            "rejectionReason": "",
+            "btnPersResDetails": "",
             "sex": "",
             "workFees": "",
             "maxAllowDuration": "",
             "qid": "",
             "relation": "",
+            "rejectionReasonCode": "",
             "btnYear": "1",
             "lblQID": "12345678901",
             "lblName": "Wajiha Rabia Parea",
             "renewFees": "",
-            "btnPersResCheckbox": "test",
+            "btnPersResCheckbox": "",
             "lblExpiryDate": "2013-01-01",
             "cancelFees": "",
             "nationality": "",
@@ -381,17 +377,19 @@ function addWidgetsfrmPersonalResidencyInput() {
             "delayFees": "",
             "PassportNo": ""
         }, {
-            "btnPersResDetails": "test",
+            "rejectionReason": "",
+            "btnPersResDetails": "",
             "sex": "",
             "workFees": "",
             "maxAllowDuration": "",
             "qid": "",
             "relation": "",
+            "rejectionReasonCode": "",
             "btnYear": "1",
             "lblQID": "23456789011",
             "lblName": "TMAM IBRAHIM AL HAMAD",
             "renewFees": "",
-            "btnPersResCheckbox": "test",
+            "btnPersResCheckbox": "",
             "lblExpiryDate": "2015-01-01",
             "cancelFees": "",
             "nationality": "",
@@ -406,7 +404,6 @@ function addWidgetsfrmPersonalResidencyInput() {
         }],
         "rowTemplate": segResPersonalInputbox,
         "rowSkin": "seg2Normal",
-        "rowFocusSkin": "seg2Focus",
         "alternateRowSkin": "sengreyNorm",
         "sectionHeaderSkin": "seg2Header",
         "separatorRequired": true,
@@ -424,34 +421,49 @@ function addWidgetsfrmPersonalResidencyInput() {
         "paddingInPixel": false,
         "containerWeight": 13
     }, {
-        "indicator": constants.SEGUI_ROW_SELECT,
+        "indicator": constants.SEGUI_NONE,
         "enableDictionary": false,
         "showProgressIndicator": true,
         "progressIndicatorColor": constants.PROGRESS_INDICATOR_COLOR_WHITE,
         "bounces": true,
         "editStyle": constants.SEGUI_EDITING_STYLE_NONE
     });
-    var btnPersResCheckbox = new kony.ui.Button({
+    var btnPersResCheckbox = new kony.ui.Image2({
         "id": "btnPersResCheckbox",
         "isVisible": true,
-        "skin": "btnCheckbox",
-        "focusSkin": "btnFocus",
-        "onClick": frmPersonalResidencyInput_btnPersResCheckbox_onClick_seq0
+        "imageWhenFailed": null,
+        "imageWhileDownloading": null,
+        "src": null
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "referenceWidth": null,
+        "referenceHeight": null,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 100
+    }, {
+        "glossyEffect": constants.IMAGE_GLOSSY_EFFECT_DEFAULT
+    });
+    var vbxPersResCheckbox = new kony.ui.Box({
+        "id": "vbxPersResCheckbox",
+        "isVisible": true,
+        "orientation": constants.BOX_LAYOUT_VERTICAL
+    }, {
+        "containerWeight": 11,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
-        "padding": [0, 3, 0, 3],
-        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "displayText": false,
-        "marginInPixel": true,
-        "paddingInPixel": false,
-        "containerWeight": 11
-    }, {
-        "glowEffect": false,
-        "showProgressIndicator": true
-    });
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    vbxPersResCheckbox.add(
+    btnPersResCheckbox);
     var lblQID = new kony.ui.Label({
         "id": "lblQID",
         "isVisible": true,
@@ -524,7 +536,7 @@ function addWidgetsfrmPersonalResidencyInput() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbxTop.add(
-    btnPersResCheckbox, lblQID, lblExpiryDate, btnYear);
+    vbxPersResCheckbox, lblQID, lblExpiryDate, btnYear);
     var lblName = new kony.ui.Label({
         "id": "lblName",
         "isVisible": true,
@@ -542,27 +554,42 @@ function addWidgetsfrmPersonalResidencyInput() {
     }, {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
-    var btnPersResDetails = new kony.ui.Button({
+    var btnPersResDetails = new kony.ui.Image2({
         "id": "btnPersResDetails",
         "isVisible": true,
-        "skin": "btnDetails",
-        "focusSkin": "btnFocus",
-        "onClick": frmPersonalResidencyInput_btnPersResDetails_onClick_seq0
+        "imageWhenFailed": null,
+        "imageWhileDownloading": null,
+        "src": null
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": false,
-        "margin": [1, 1, 1, 1],
-        "padding": [0, 3, 0, 3],
-        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "displayText": false,
-        "marginInPixel": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "referenceWidth": null,
+        "referenceHeight": null,
+        "marginInPixel": false,
         "paddingInPixel": false,
-        "containerWeight": 9
+        "containerWeight": 100
     }, {
-        "glowEffect": false,
-        "showProgressIndicator": true
+        "glossyEffect": constants.IMAGE_GLOSSY_EFFECT_DEFAULT
     });
+    var vbxPersResDetails = new kony.ui.Box({
+        "id": "vbxPersResDetails",
+        "isVisible": true,
+        "orientation": constants.BOX_LAYOUT_VERTICAL
+    }, {
+        "containerWeight": 10,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "vExpand": false,
+        "hExpand": true,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    vbxPersResDetails.add(
+    btnPersResDetails);
     var hbxBottom = new kony.ui.Box({
         "id": "hbxBottom",
         "isVisible": true,
@@ -580,7 +607,7 @@ function addWidgetsfrmPersonalResidencyInput() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbxBottom.add(
-    lblName, btnPersResDetails);
+    lblName, vbxPersResDetails);
     segResPersonalInputbox.add(
     hbxTop, hbxBottom);
     var line1953273106244171 = new kony.ui.Line({
@@ -614,7 +641,7 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblAmountValue = new kony.ui.Label({
         "id": "lblAmountValue",
         "isVisible": true,
-        "text": "200.00",
+        "text": "0.00",
         "skin": "lblBlackBold"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,

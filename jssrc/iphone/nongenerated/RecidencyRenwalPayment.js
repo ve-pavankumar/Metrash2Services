@@ -4,8 +4,9 @@ function capturePaymentDetailsForResidencyServices() {
     paymentDetails.cctype = frmResidencyPayment.lbCardType.selectedKeyValue[0];
     paymentDetails.ccnumber = frmResidencyPayment.tbCardNumber.text;
     paymentDetails.holdername = frmResidencyPayment.tbHolderName.text;
-    var twoDigityearstring = frmResidencyPayment.calExpiryDate.year + "";
-    paymentDetails.expirationdate = appendZeroToMonth(frmResidencyPayment.calExpiryDate.month) + "/" + twoDigityearstring.substring(2, 4);
+    //var twoDigityearstring=frmResidencyPayment.calExpiryDate.year+"";
+    //paymentDetails.expirationdate=appendZeroToMonth(frmResidencyPayment.calExpiryDate.month)+"/"+twoDigityearstring.substring(2, 4);
+    paymentDetails.expirationdate = getCardExpiryDate();
     paymentDetails.cvv2 = frmResidencyPayment.tbCVV.text;
     return paymentDetails;
 }
@@ -32,17 +33,32 @@ function callPaymentService(paymentDetails) {
     //payment_inputparam["paymentResponse"] =JSON.stringify(recidencyrenwalObject.paymentDTO;
     payment_inputparam["deliveryDTO"] = JSON.stringify(recidencyrenwalObject.DeliveryDetailsDTO);
     kony.print("I/P params " + payment_inputparam);
-    paymentHandle = appmiddlewareinvokerasync(payment_inputparam, callPaymentCallBack);
+    paymentHandle = appmiddlewareinvokerasync(payment_inputparam, callPersonalResidencyResultCallBack);
 }
 
-function callPaymentCallBack(status, output) {
+function callPersonalResidencyResultCallBack(status, output) {
     kony.print("Entering into callPaymentCallBack");
     kony.print("status: " + status);
     if (null != status && status == 400) {
         kony.print("callPaymentCallBack output: " + output);
         kony.print("OPSTATUS " + output["opstatus"]);
         if (null != output && null != output["opstatus"] && 0 == output["opstatus"]) {
-            recidencyrenwalObject.paymentDTO = output.paymentResponse;
+            output.errorCode = output.errorCode || "";
+            var segmentData = [];
+            if (output.errorCode != "") {
+                recidencyrenwalObject.paymentDTO = output.paymentResponse;
+                if (null != output.responseSet && output.responseSet.length > 0) for (var item in output.responseSet)
+                var reseltSet = [];
+                var rowItem = output.responseSet[item];
+                resultset = {
+                    lblPersResQidResult: rowItem.qidNum,
+                    lblPersResExpDateResult: rowItem.rpExpiryDate,
+                    lblPersResYearResult: rowItem.duration,
+                    lblPersResNameResult: getLocaleSpecificDisplayValuesForRecidencyRenewalResult(rowItem.residentEnglishName, rowItem.residentArabicName)
+                }
+                segmentData.push(reseltSet);
+                frmPersonalResidencyResult.segmentPersResidencyResult.setData(segmentData);
+            }
         }
     }
 }
@@ -82,4 +98,48 @@ function paymentAmountZero() {
     } else {
         frmResidencyPayment.show();
     }
+}
+
+function populateYearComboBox() {
+    var d = new Date();
+    var currentYear = Math.floor(kony.os.toNumber(d.getFullYear()));
+    var yearComboBoxData = [];
+    for (var i = currentYear; i >= currentYear && i <= currentYear + 10; i++) {
+        var yearComboBoxDataItem = []
+        var iString = i + "";
+        yearComboBoxDataItem[0] = iString;
+        yearComboBoxDataItem[1] = iString;
+        yearComboBoxData.push(yearComboBoxDataItem);
+    }
+    frmResidencyPayment.cmbYear.masterData = yearComboBoxData;
+}
+
+function residencyPaymentPostShow() {
+    populateYearComboBox();
+    frmResidencyPayment.lblAmountValue.text = recidencyrenwalObject.totalAmount;
+}
+
+function getCardExpiryDate() {
+    var date = "";
+    var month = appendZeroToMonth(frmResidencyPayment.cmbMonth.selectedKey);
+    var yearString = frmResidencyPayment.cmbYear.selectedKey + "";
+    var year = yearString.substring(2, 4);
+    date = month + "/" + year;
+    kony.print(date);
+    return date;
+}
+
+function getLocaleSpecificDisplayValuesForRecidencyRenewalResult(engName, arabicName) {
+    var locale = "ar_QR";
+    var name = "";
+    if (locale == "ar_QR") {
+        name = arabicName;
+    } else if (locale = "en_QR") {
+        name = engName;
+    }
+    return name;
+}
+
+function PersonalResidencyResultPostShow() {
+    mapSponsorDetailsOnDisplay(recidencyrenwalObject.sponsorDeatils["sponsorEnglishName"], recidencyrenwalObject.sponsorDeatils["sponsorArabicName"], recidencyrenwalObject.sponsorDeatils["sponsorQidNum"], frmPersonalResidencyResult);
 }
