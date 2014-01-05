@@ -52,7 +52,7 @@
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>
-            <testvalue>{"fullName":"","arbName4":" ","passportIssuePlace":"","natArabicDesc":"??????? ","engName2":"SAEED","cardFees":"100","qidNum":"24373657525","arbName1":"????? ","personType":"3","renewalPeriod":"1","passportNum":"637945","exitEntryDate":"0001-01-01","passportOwnIndicator":"1","engName4":"","professionCode":"","statusCode":"","exitEntryInd":"","passportissueDate":"2000-08-02","renewFees":"300","arbName3":"??? ???? ","cancelFees":"0","relationArabicDesc":"???","rpExpiryDate":"2013-01-01","engName1":"DHAFYAH","exitPermitFees":"0","numAccompanies":"0","arbName5":"??????? ","sexEnglishDesc":"MALE","relationEnglishDesc":"Work","englishName":"DHAFYAH SAEED   AL-SAADON","arabicNamearabicName":"?????  ????  ??? ????    ???????","relationCode":"0","engName3":"","sexCode":"1","passportExpiryDate":"2018-01-01","natCode":"736","arbName2":"???? ","passportNatEngDesc":"","passportType":"","professionArabicDesc":"","dateOfBirth":"1985-10-25","passportNatCode":"","maxAllowedDurForRenew":"3","natEnglishDesc":"SUDAN","delayFees":"2740","passportNatArabicDesc":"","engName5":"AL-SAADON","sexArabicDesc":"???","feeIndicator":""},{"fullName":"","arbName4":" ","passportIssuePlace":"","natArabicDesc":"??????? ","engName2":"RBIA","cardFees":"100","qidNum":"24373684166","arbName1":"???? ","personType":"3","renewalPeriod":"1","passportNum":"6751","exitEntryDate":"2011-06-12","passportOwnIndicator":"1","engName4":"","professionCode":"","statusCode":"","exitEntryInd":"1","passportissueDate":"1990-02-24","renewFees":"300","arbName3":" ","cancelFees":"0","relationArabicDesc":"???","rpExpiryDate":"2013-01-01","engName1":"WAJIH","exitPermitFees":"0","numAccompanies":"0","arbName5":"?????? ?????? ","sexEnglishDesc":"MALE","relationEnglishDesc":"Work","englishName":"WAJIH RBIA   PERERA","arabicNamearabicName":"????  ?????      ?????? ??????","relationCode":"0","engName3":"","sexCode":"1","passportExpiryDate":"2018-01-01","natCode":"736","arbName2":"????? ","passportNatEngDesc":"","passportType":"","professionArabicDesc":"","dateOfBirth":"1985-10-25","passportNatCode":"","maxAllowedDurForRenew":"3","natEnglishDesc":"SUDAN","delayFees":"2740","passportNatArabicDesc":"","engName5":"PERERA","sexArabicDesc":"???","feeIndicator":""}</testvalue>
+            <testvalue>[{"fullName":"","arbName4":" ","passportIssuePlace":"","natArabicDesc":"??????? ","engName2":"SAEED","cardFees":"100","qidNum":"24373657525","arbName1":"????? ","personType":"3","renewalPeriod":"1","passportNum":"637945","exitEntryDate":"0001-01-01","passportOwnIndicator":"1","engName4":"","professionCode":"","statusCode":"","exitEntryInd":"","passportissueDate":"2000-08-02","renewFees":"300","arbName3":"??? ???? ","cancelFees":"0","relationArabicDesc":"???","rpExpiryDate":"2013-01-01","engName1":"DHAFYAH","exitPermitFees":"0","numAccompanies":"0","arbName5":"??????? ","sexEnglishDesc":"MALE","relationEnglishDesc":"Work","englishName":"DHAFYAH SAEED   AL-SAADON","arabicNamearabicName":"?????  ????  ??? ????    ???????","relationCode":"0","engName3":"","sexCode":"1","passportExpiryDate":"2018-01-01","natCode":"736","arbName2":"???? ","passportNatEngDesc":"","passportType":"","professionArabicDesc":"","dateOfBirth":"1985-10-25","passportNatCode":"","maxAllowedDurForRenew":"3","natEnglishDesc":"SUDAN","delayFees":"2740","passportNatArabicDesc":"","engName5":"AL-SAADON","sexArabicDesc":"???","feeIndicator":""},{"fullName":"","arbName4":" ","passportIssuePlace":"","natArabicDesc":"??????? ","engName2":"RBIA","cardFees":"100","qidNum":"24373684166","arbName1":"???? ","personType":"3","renewalPeriod":"1","passportNum":"6751","exitEntryDate":"2011-06-12","passportOwnIndicator":"1","engName4":"","professionCode":"","statusCode":"","exitEntryInd":"1","passportissueDate":"1990-02-24","renewFees":"300","arbName3":" ","cancelFees":"0","relationArabicDesc":"???","rpExpiryDate":"2013-01-01","engName1":"WAJIH","exitPermitFees":"0","numAccompanies":"0","arbName5":"?????? ?????? ","sexEnglishDesc":"MALE","relationEnglishDesc":"Work","englishName":"WAJIH RBIA   PERERA","arabicNamearabicName":"????  ?????      ?????? ??????","relationCode":"0","engName3":"","sexCode":"1","passportExpiryDate":"2018-01-01","natCode":"736","arbName2":"????? ","passportNatEngDesc":"","passportType":"","professionArabicDesc":"","dateOfBirth":"1985-10-25","passportNatCode":"","maxAllowedDurForRenew":"3","natEnglishDesc":"SUDAN","delayFees":"2740","passportNatArabicDesc":"","engName5":"PERERA","sexArabicDesc":"???","feeIndicator":""}]</testvalue>
             <value></value>
         </inparam>
         <inparam>
@@ -470,7 +470,205 @@
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>
-            <testvalue></testvalue>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>applierQID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>carrier</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>deliveryFee</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>deliveryOptionID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>departmentType</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>functionCode</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>receivingType</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asfd</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>returnOldDocument</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asfd</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>sourceType</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>asdf</testvalue>
             <value></value>
         </inparam>
         <intemplate>&lt;soapenv:Envelope xmlns:ses="http://session.rp3.moi.gov.qa/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
@@ -621,6 +819,19 @@
             &lt;termId&gt;$termId&lt;/termId&gt;
             &lt;totalAmount&gt;$totalAmount&lt;/totalAmount&gt;
          &lt;/arg5&gt;
+         &lt;arg6&gt;
+         	&lt;applierQID&gt;$applierQID&lt;/applierQID&gt;
+			&lt;carrier&gt;$carrier&lt;/carrier&gt;
+			&lt;deliveryFee&gt;$deliveryFee&lt;/deliveryFee&gt;
+			&lt;deliveryOptionID&gt;$deliveryOptionID&lt;/deliveryOptionID&gt;
+			&lt;departmentType&gt;$departmentType&lt;/departmentType&gt;
+			&lt;functionCode&gt;$functionCode&lt;/functionCode&gt;
+			&lt;mobileNumber&gt;66773345&lt;/mobileNumber&gt;
+			&lt;receivingType&gt;$receivingType&lt;/receivingType&gt;
+			&lt;returnOldDocument&gt;$returnOldDocument&lt;/returnOldDocument&gt;
+			&lt;sourceType&gt;$sourceType&lt;/sourceType&gt;
+			&lt;userID&gt;$userId&lt;/userID&gt;
+         &lt;/arg6&gt;
       &lt;/ses:renewResidencePermit&gt;
    &lt;/soapenv:Body&gt;
 &lt;/soapenv:Envelope&gt;
@@ -1415,15 +1626,16 @@
         <operationname>renewResidencePermit</operationname>
         <outtemplate>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
    &lt;soapenv:Body&gt;
-      &lt;ns2:renewResidencePermitResponse xmlns:ns2="http://session.rp3.moi.gov.qa/"&gt;
-         &lt;return&gt;
-            &lt;duration&gt;1&lt;/duration&gt;
-            &lt;qidNum&gt;24373684166&lt;/qidNum&gt;
-            &lt;residentArabicName&gt;????  ?????      ?????? ??????&lt;/residentArabicName&gt;
-            &lt;residentEnglishName&gt;WAJIH  RBIA      PERERA&lt;/residentEnglishName&gt;
-            &lt;rpExpiryDate&gt;2013/12/31&lt;/rpExpiryDate&gt;
-         &lt;/return&gt;
-      &lt;/ns2:renewResidencePermitResponse&gt;
+      &lt;soapenv:Fault&gt;
+         &lt;faultcode&gt;soapenv:Server&lt;/faultcode&gt;
+         &lt;faultstring&gt;qa.gov.moi.rp3.exceptions.WsException&lt;/faultstring&gt;
+         &lt;detail&gt;
+            &lt;ns2:WsException xmlns:ns2="http://session.rp3.moi.gov.qa/"&gt;
+               &lt;errorCode&gt;RPD003&lt;/errorCode&gt;
+               &lt;errorMessage&gt;NO DATA FOUND FOR THIS SEARCH&lt;/errorMessage&gt;
+            &lt;/ns2:WsException&gt;
+         &lt;/detail&gt;
+      &lt;/soapenv:Fault&gt;
    &lt;/soapenv:Body&gt;
 &lt;/soapenv:Envelope&gt;
 </outtemplate>

@@ -1,30 +1,54 @@
 //Form JS File
+function frmPersonalResidencyInput_frmPersonalResidencyInput_preshow_seq0(eventobject, neworientation) {
+    residencyInputPreShow.call(this);
+};
+
+function frmPersonalResidencyInput_frmPersonalResidencyInput_postshow_seq0(eventobject, neworientation) {
+    residencyPaymentPostShow.call(this);
+};
+
+function frmPersonalResidencyInput_vbxPersResCheckbox_onClick_seq0(eventobject, context) {
+    checkboxClicked.call(this);
+};
+
 function frmPersonalResidencyInput_btnYear_onClick_seq0(eventobject, context) {
     yearButtonClicked.call(this);
 };
 
+function frmPersonalResidencyInput_vbxPersResDetails_onClick_seq0(eventobject, context) {
+    detailsIconClicked.call(this);
+};
+
+function frmPersonalResidencyInput_btnQPost_onClick_seq0(eventobject) {
+    QPostOptionClicked.call(this);
+};
+
+function frmPersonalResidencyInput_btnImmigration_onClick_seq0(eventobject) {
+    ImmigrationOptionClicked.call(this);
+};
+
 function frmPersonalResidencyInput_btnPersResInputBack_onClick_seq0(eventobject) {
-    frmResidencyMenu.show();
+    residencyInputBackEvet.call(this);
 };
 
 function frmPersonalResidencyInput_btnPersResInputSubmit_onClick_seq0(eventobject) {
-    paymentAmountZero.call(this);
+    personalResidencyInputScreenValidations.call(this);
 };
 
 function addWidgetsfrmPersonalResidencyInput() {
     var label1953273106241700 = new kony.ui.Label({
         "id": "label1953273106241700",
         "isVisible": true,
-        "text": "QID",
+        "text": kony.i18n.getLocalizedString("m.qid"),
         "skin": "lblRed"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 16
     }, {
@@ -39,10 +63,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 84
     }, {
@@ -75,10 +99,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 100
     }, {
@@ -129,10 +153,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "containerWeight": 12,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [10, 10, 10, 0],
+        "margin": [3, 3, 3, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -141,16 +165,16 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblPress = new kony.ui.Label({
         "id": "lblPress",
         "isVisible": true,
-        "text": "Please Press",
+        "text": kony.i18n.getLocalizedString("m.rrc.label1"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 28
     }, {
@@ -178,16 +202,16 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblChooseQid = new kony.ui.Label({
         "id": "lblChooseQid",
         "isVisible": true,
-        "text": "to Choose the QID's",
+        "text": kony.i18n.getLocalizedString("m.rrc.label2"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 45
     }, {
@@ -202,10 +226,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "containerWeight": 11,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 10, 0, 0],
+        "margin": [0, 3, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -214,16 +238,16 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblQidName = new kony.ui.Label({
         "id": "lblQidName",
         "isVisible": true,
-        "text": "QID/Name",
+        "text": kony.i18n.getLocalizedString("m.rrc.result.titleQid"),
         "skin": "lblWhite"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -232,16 +256,16 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblExpiryDateDisplay = new kony.ui.Label({
         "id": "lblExpiryDateDisplay",
         "isVisible": true,
-        "text": "Expiry Date",
+        "text": kony.i18n.getLocalizedString("m.rrc.result.titleDate"),
         "skin": "lblWhite"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -250,16 +274,16 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblYear = new kony.ui.Label({
         "id": "lblYear",
         "isVisible": true,
-        "text": "Year",
+        "text": kony.i18n.getLocalizedString("m.rrc.result.titleYear"),
         "skin": "lblWhite"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 20
     }, {
@@ -278,7 +302,7 @@ function addWidgetsfrmPersonalResidencyInput() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -450,6 +474,7 @@ function addWidgetsfrmPersonalResidencyInput() {
     var vbxPersResCheckbox = new kony.ui.Box({
         "id": "vbxPersResCheckbox",
         "isVisible": true,
+        "onClick": frmPersonalResidencyInput_vbxPersResCheckbox_onClick_seq0,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 11,
@@ -472,10 +497,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_LEFT,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [0, 0, 5, 0],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 33
     }, {
@@ -489,10 +514,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 30
     }, {
@@ -508,11 +533,11 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [0, 4, 0, 0],
+        "margin": [0, 1, 0, 0],
         "padding": [0, 3, 0, 3],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 10
     }, {
@@ -545,10 +570,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 90
     }, {
@@ -576,6 +601,7 @@ function addWidgetsfrmPersonalResidencyInput() {
     var vbxPersResDetails = new kony.ui.Box({
         "id": "vbxPersResDetails",
         "isVisible": true,
+        "onClick": frmPersonalResidencyInput_vbxPersResDetails_onClick_seq0,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 10,
@@ -616,23 +642,175 @@ function addWidgetsfrmPersonalResidencyInput() {
         "skin": "lineNormal"
     }, {
         "thickness": 1,
-        "margin": [1, 1, 1, 1],
-        "marginInPixel": true,
+        "margin": [0, 0, 0, 0],
+        "marginInPixel": false,
         "paddingInPixel": false
     }, {});
+    var lblDeliveryMsg = new kony.ui.Label({
+        "id": "lblDeliveryMsg",
+        "isVisible": true,
+        "text": null,
+        "skin": "lblBlackNor"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [1, 1, 1, 1],
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 43
+    }, {
+        "wrapping": constants.WIDGET_TEXT_WORD_WRAP
+    });
+    var btnQPost = new kony.ui.Button({
+        "id": "btnQPost",
+        "isVisible": true,
+        "text": "Button",
+        "skin": "btnCheckbox",
+        "focusSkin": "btnFocus",
+        "onClick": frmPersonalResidencyInput_btnQPost_onClick_seq0
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 3, 0, 3],
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 12
+    }, {
+        "glowEffect": false,
+        "showProgressIndicator": true
+    });
+    var lblQPost = new kony.ui.Label({
+        "id": "lblQPost",
+        "isVisible": true,
+        "text": kony.i18n.getLocalizedString("m.qPost"),
+        "skin": "lblBlackNor"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [1, 1, 1, 1],
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 36
+    }, {
+        "wrapping": constants.WIDGET_TEXT_WORD_WRAP
+    });
+    var btnImmigration = new kony.ui.Button({
+        "id": "btnImmigration",
+        "isVisible": true,
+        "text": "Button",
+        "skin": "btnCheckbox",
+        "focusSkin": "btnFocus",
+        "onClick": frmPersonalResidencyInput_btnImmigration_onClick_seq0
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 3, 0, 3],
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 13
+    }, {
+        "glowEffect": false,
+        "showProgressIndicator": true
+    });
+    var lblImmigration = new kony.ui.Label({
+        "id": "lblImmigration",
+        "isVisible": true,
+        "text": kony.i18n.getLocalizedString("m.rPDept"),
+        "skin": "lblBlackNor"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [1, 1, 1, 1],
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 39
+    }, {
+        "wrapping": constants.WIDGET_TEXT_WORD_WRAP
+    });
+    var hbox1563352826303729 = new kony.ui.Box({
+        "id": "hbox1563352826303729",
+        "isVisible": true,
+        "position": constants.BOX_POSITION_AS_NORMAL,
+        "orientation": constants.BOX_LAYOUT_HORIZONTAL
+    }, {
+        "containerWeight": 57,
+        "percent": true,
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "vExpand": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    hbox1563352826303729.add(
+    btnQPost, lblQPost, btnImmigration, lblImmigration);
+    var vbox1563352826303726 = new kony.ui.Box({
+        "id": "vbox1563352826303726",
+        "isVisible": true,
+        "orientation": constants.BOX_LAYOUT_VERTICAL
+    }, {
+        "containerWeight": 100,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "vExpand": false,
+        "hExpand": true,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    vbox1563352826303726.add(
+    lblDeliveryMsg, hbox1563352826303729);
+    var hboxDelivery = new kony.ui.Box({
+        "id": "hboxDelivery",
+        "isVisible": true,
+        "skin": "hboxWhiteRound",
+        "position": constants.BOX_POSITION_AS_NORMAL,
+        "orientation": constants.BOX_LAYOUT_HORIZONTAL
+    }, {
+        "containerWeight": 15,
+        "percent": true,
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "margin": [2, 2, 2, 0],
+        "padding": [0, 0, 0, 0],
+        "vExpand": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    hboxDelivery.add(
+    vbox1563352826303726);
     var lblAmount = new kony.ui.Label({
         "id": "lblAmount",
         "isVisible": true,
-        "text": "Amount",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.amount"),
         "skin": "lblRed"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 38
     }, {
@@ -647,10 +825,10 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 19
     }, {
@@ -659,16 +837,16 @@ function addWidgetsfrmPersonalResidencyInput() {
     var lblQar = new kony.ui.Label({
         "id": "lblQar",
         "isVisible": true,
-        "text": "QAR",
+        "text": kony.i18n.getLocalizedString("m.qar"),
         "skin": "lblRed"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 29
     }, {
@@ -678,16 +856,16 @@ function addWidgetsfrmPersonalResidencyInput() {
         "id": "hbxAmountResidencyPers",
         "isVisible": true,
         "skin": "hboxAmountBackground",
-        "position": constants.BOX_POSITION_AS_NORMAL,
+        "position": constants.BOX_POSITION_AS_FOOTER,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
         "containerWeight": 11,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "margin": [10, 16, 10, 0],
+        "margin": [3, 5, 3, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -696,7 +874,7 @@ function addWidgetsfrmPersonalResidencyInput() {
     var btnPersResInputBack = new kony.ui.Button({
         "id": "btnPersResInputBack",
         "isVisible": true,
-        "text": kony.i18n.getLocalizedString("m.btnback"),
+        "text": kony.i18n.getLocalizedString("m.back"),
         "skin": "btnBack",
         "focusSkin": "btnBackFcs",
         "onClick": frmPersonalResidencyInput_btnPersResInputBack_onClick_seq0
@@ -704,12 +882,12 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [6, 5, 0, 5],
+        "margin": [2, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -718,7 +896,7 @@ function addWidgetsfrmPersonalResidencyInput() {
     var btnPersResInputSubmit = new kony.ui.Button({
         "id": "btnPersResInputSubmit",
         "isVisible": true,
-        "text": kony.i18n.getLocalizedString("m.btnsubmit"),
+        "text": kony.i18n.getLocalizedString("m.done"),
         "skin": "btnNextNorm",
         "focusSkin": "btnNextFcs",
         "onClick": frmPersonalResidencyInput_btnPersResInputSubmit_onClick_seq0
@@ -726,12 +904,12 @@ function addWidgetsfrmPersonalResidencyInput() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -751,14 +929,14 @@ function addWidgetsfrmPersonalResidencyInput() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19284323084890.add(
     btnPersResInputBack, btnPersResInputSubmit);
     frmPersonalResidencyInput.add(
-    hbox1953273106183651, hbox195327310624641, hbxResidencyPersInput, segResPersonalInput, line1953273106244171, hbxAmountResidencyPers, hbox19284323084890);
+    hbox1953273106183651, hbox195327310624641, hbxResidencyPersInput, segResPersonalInput, line1953273106244171, hboxDelivery, hbxAmountResidencyPers, hbox19284323084890);
 };
 
 function frmPersonalResidencyInputGlobals() {
@@ -770,6 +948,8 @@ function frmPersonalResidencyInputGlobals() {
         "headers": [hbox3323200773],
         "enabledForIdleTimeout": false,
         "skin": "frmBg",
+        "preShow": frmPersonalResidencyInput_frmPersonalResidencyInput_preshow_seq0,
+        "postShow": frmPersonalResidencyInput_frmPersonalResidencyInput_postshow_seq0,
         "addWidgets": addWidgetsfrmPersonalResidencyInput
     }, {
         "padding": [0, 0, 0, 0],

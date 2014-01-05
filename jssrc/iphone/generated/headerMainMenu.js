@@ -17,8 +17,8 @@ function initializeheaderMainMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
 
@@ -38,8 +38,8 @@ function initializeheaderMainMenu() {
             "padding": [0, 0, 0, 0],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
             "displayText": true,
-            "marginInPixel": true,
-            "paddingInPixel": true,
+            "marginInPixel": false,
+            "paddingInPixel": false,
             "containerWeight": 15
         }, {
             "glowEffect": false,
@@ -57,7 +57,7 @@ function initializeheaderMainMenu() {
             "margin": [0, 0, 0, 0],
             "padding": [0, 0, 48, 0],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "marginInPixel": true,
+            "marginInPixel": false,
             "paddingInPixel": true,
             "containerWeight": 85
         }, {

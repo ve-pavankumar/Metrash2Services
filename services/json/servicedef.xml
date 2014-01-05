@@ -22,10 +22,43 @@
             <config-param name="server.auth.host" value=""/>
             <config-param name="server.auth.ntlm.domain" value=""/>
          </service-config>
-         <service-input/>
+         <service-input>
+            <param datatype="string" encode="true" name="lang" sms-name="" src="request" value="en"/>
+         </service-input>
          <service-output>
             <param datatype="string" format="None" formatvalue="" name="userName" sms-name="" src="userName" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="password" sms-name="" src="password" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="getErrorMessage" passwordencrypted="true" smscode="" smsenabled="false" type="jsonConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://172.20.44.162:8080/Metrash2/rest/metrash2/getMessage?messageId=$messageId&amp;lang=en"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="http.method" value="POST"/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <param datatype="string" encode="true" name="messageId" sms-name="" src="request" value=""/>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="messageId" sms-name="" src="messageId" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="messageText" sms-name="" src="messageText" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="errorMessage" target=""/>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
             <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
@@ -80,6 +113,42 @@
             <param datatype="string" format="None" formatvalue="" name="authUsrId" sms-name="" src="//authUsrId" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="cardNumber" sms-name="" src="//cardNumber" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="systemName" sms-name="" src="//systemName" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="personalResidenyRenewalConfiguration" passwordencrypted="true" smscode="" smsenabled="false" type="jsonConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://172.20.44.162:8080/Metrash2/rest/metrash2/getResidencyServicesConfiguration?lang=en"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="http.method" value="POST"/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input/>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="allowPersRenDiscount" sms-name="" src="allowPersRenDiscount" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="enablePersRenQPostDeliveryOption" sms-name="" src="enablePersRenQPostDeliveryOption" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="enablePersRenRpDeliveryOption" sms-name="" src="enablePersRenRpDeliveryOption" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="errorMessage" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="persRen3YearDiscount" sms-name="" src="persRen3YearDiscount" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="persRenDeliveryOptionMsg" sms-name="" src="persRenDeliveryOptionMsg" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="persRenDiscountPercent" sms-name="" src="persRenDiscountPercent" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="persRenQPostDeliveryOptionResultMsg" sms-name="" src="persRenQPostDeliveryOptionResultMsg" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="persRenRpDeliveryOptionResultMsg" sms-name="" src="persRenRpDeliveryOptionResultMsg" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="showPersRenDeliveryMethodSection" sms-name="" src="showPersRenDeliveryMethodSection" target="response"/>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
             <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>

@@ -900,7 +900,7 @@
                     <right>0</right>
                     <top>0</top>
                     <bottom>0</bottom>
-                    <unit>px</unit>
+                    <unit>%</unit>
                 </iphonerc>
                 <iphonerc_override>true</iphonerc_override>
                 <j2me>
@@ -1167,7 +1167,7 @@
                     <right>0</right>
                     <top>0</top>
                     <bottom>0</bottom>
-                    <unit>px</unit>
+                    <unit>%</unit>
                 </iphonerc>
                 <iphonerc_override>true</iphonerc_override>
                 <j2me>
@@ -1550,7 +1550,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>

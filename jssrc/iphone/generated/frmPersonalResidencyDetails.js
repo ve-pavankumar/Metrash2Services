@@ -7,16 +7,16 @@ function addWidgetsfrmPersonalResidencyDetails() {
     var label1953273106244169 = new kony.ui.Label({
         "id": "label1953273106244169",
         "isVisible": true,
-        "text": "Personal Details",
+        "text": kony.i18n.getLocalizedString("rr.pers.det.title"),
         "skin": "lblBlackBold100"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [10, 0, 0, 0],
+        "margin": [3, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 100
     }, {
@@ -106,7 +106,7 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "paddingInPixel": false,
         "containerWeight": 10
     }, {
-        "indicator": constants.SEGUI_ROW_SELECT,
+        "indicator": constants.SEGUI_NONE,
         "enableDictionary": false,
         "showProgressIndicator": true,
         "progressIndicatorColor": constants.PROGRESS_INDICATOR_COLOR_WHITE,
@@ -121,10 +121,10 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_LEFT,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 50
     }, {
@@ -138,10 +138,10 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_LEFT,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 50
     }, {
@@ -156,7 +156,7 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "containerWeight": 100,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 0, 0, 0],
+        "margin": [3, 0, 3, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
         "marginInPixel": false,
@@ -170,7 +170,7 @@ function addWidgetsfrmPersonalResidencyDetails() {
     var btnPersResidencyDetails = new kony.ui.Button({
         "id": "btnPersResidencyDetails",
         "isVisible": true,
-        "text": "Back",
+        "text": kony.i18n.getLocalizedString("m.back"),
         "skin": "btnNextNorm",
         "focusSkin": "btnNextFcs",
         "onClick": frmPersonalResidencyDetails_btnPersResidencyDetails_onClick_seq0
@@ -178,12 +178,12 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -203,8 +203,8 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19284323084890.add(

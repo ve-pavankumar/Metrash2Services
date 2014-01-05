@@ -14,8 +14,8 @@ function initializeheaderfrmLogin() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
 
@@ -32,7 +32,7 @@ function initializeheaderfrmLogin() {
             "margin": [0, 0, 0, 0],
             "padding": [0, 0, 0, 0],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "marginInPixel": true,
+            "marginInPixel": false,
             "paddingInPixel": true,
             "containerWeight": 0
         }, {

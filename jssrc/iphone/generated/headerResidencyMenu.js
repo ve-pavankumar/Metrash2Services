@@ -17,8 +17,8 @@ function initializeheaderResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
 
@@ -38,8 +38,8 @@ function initializeheaderResidencyMenu() {
             "padding": [0, 0, 0, 0],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
             "displayText": true,
-            "marginInPixel": true,
-            "paddingInPixel": true,
+            "marginInPixel": false,
+            "paddingInPixel": false,
             "containerWeight": 15
         }, {
             "glowEffect": false,
@@ -48,7 +48,7 @@ function initializeheaderResidencyMenu() {
         var label19320370194643 = new kony.ui.Label({
             "id": "label19320370194643",
             "isVisible": true,
-            "text": "Residency Renewal",
+            "text": kony.i18n.getLocalizedString("rr.pers.det.title"),
             "skin": "lblWhiteBold"
         }, {
             "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
@@ -57,7 +57,7 @@ function initializeheaderResidencyMenu() {
             "margin": [0, 0, 0, 0],
             "padding": [0, 0, 48, 0],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "marginInPixel": true,
+            "marginInPixel": false,
             "paddingInPixel": true,
             "containerWeight": 85
         }, {

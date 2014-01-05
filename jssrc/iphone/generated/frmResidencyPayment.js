@@ -8,24 +8,23 @@ function frmResidencyPayment_btnPersResPaymentBack_onClick_seq0(eventobject) {
 };
 
 function frmResidencyPayment_btnPersResPaymentSubmit_onClick_seq0(eventobject) {
-    executePaymentSubmit.call(this);
-    frmPersonalResidencyResult.show();
+    showPaymentConfirmationPopup.call(this);
 };
 
 function addWidgetsfrmResidencyPayment() {
     var lblCreditCardInfo = new kony.ui.Label({
         "id": "lblCreditCardInfo",
         "isVisible": true,
-        "text": "Enter your Credit Card Informations",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.cc.subtitle"),
         "skin": "lblBlackBold"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 0, 0, 0],
+        "margin": [2, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 6
     }, {
@@ -34,16 +33,16 @@ function addWidgetsfrmResidencyPayment() {
     var lblAmount = new kony.ui.Label({
         "id": "lblAmount",
         "isVisible": true,
-        "text": "Amount (QAR)",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.amount"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 45
     }, {
@@ -58,10 +57,10 @@ function addWidgetsfrmResidencyPayment() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 55
     }, {
@@ -77,10 +76,10 @@ function addWidgetsfrmResidencyPayment() {
         "containerWeight": 11,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [7, 16, 7, 0],
+        "margin": [2, 5, 2, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -89,16 +88,16 @@ function addWidgetsfrmResidencyPayment() {
     var lblCardType = new kony.ui.Label({
         "id": "lblCardType",
         "isVisible": true,
-        "text": "Card Type",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.cc.cardType"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 7, 0, 0],
+        "margin": [2, 2, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 6
     }, {
@@ -118,10 +117,10 @@ function addWidgetsfrmResidencyPayment() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 7, 7, 0],
+        "margin": [2, 2, 2, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 7
     }, {
@@ -132,16 +131,16 @@ function addWidgetsfrmResidencyPayment() {
     var lblCardNumber = new kony.ui.Label({
         "id": "lblCardNumber",
         "isVisible": true,
-        "text": "Card Number",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.cc.number"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 0, 0, 0],
+        "margin": [2, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 6
     }, {
@@ -184,16 +183,16 @@ function addWidgetsfrmResidencyPayment() {
     var lblHolderName = new kony.ui.Label({
         "id": "lblHolderName",
         "isVisible": true,
-        "text": "Holder Name",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.cc.holder"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 0, 0, 0],
+        "margin": [2, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 6
     }, {
@@ -236,16 +235,16 @@ function addWidgetsfrmResidencyPayment() {
     var lblExpiryDate = new kony.ui.Label({
         "id": "lblExpiryDate",
         "isVisible": true,
-        "text": "Expiry Date",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.cc.expirationdate"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 0, 0, 0],
+        "margin": [2, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 6
     }, {
@@ -274,10 +273,10 @@ function addWidgetsfrmResidencyPayment() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 100
     }, {
@@ -311,10 +310,10 @@ function addWidgetsfrmResidencyPayment() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 100
     }, {
@@ -360,16 +359,16 @@ function addWidgetsfrmResidencyPayment() {
     var lblCVV = new kony.ui.Label({
         "id": "lblCVV",
         "isVisible": true,
-        "text": "CVV",
+        "text": kony.i18n.getLocalizedString("m.ps.epf.pay.cc.cvv2"),
         "skin": "lblBlackNor"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [7, 0, 0, 0],
+        "margin": [2, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 6
     }, {
@@ -420,12 +419,12 @@ function addWidgetsfrmResidencyPayment() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [6, 5, 0, 5],
+        "margin": [2, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -442,12 +441,12 @@ function addWidgetsfrmResidencyPayment() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -467,8 +466,8 @@ function addWidgetsfrmResidencyPayment() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19284323084890.add(

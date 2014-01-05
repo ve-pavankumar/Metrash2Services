@@ -11,17 +11,17 @@
         <escapeXML>false</escapeXML>
         <group>other</group>
         <httpmethod>POST</httpmethod>
-        <id>authentication</id>
-        <ignoreProxy>true</ignoreProxy>
+        <id>getErrorMessage</id>
+        <ignoreProxy>false</ignoreProxy>
         <inparam>
             <category></category>
             <datatype>string</datatype>
-            <defaultvalue>en</defaultvalue>
+            <defaultvalue></defaultvalue>
             <description></description>
             <encode>true</encode>
             <format>None</format>
             <formatvalue></formatvalue>
-            <id>lang</id>
+            <id>messageId</id>
             <invalue></invalue>
             <name></name>
             <order></order>
@@ -32,7 +32,7 @@
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>
-            <testvalue>en</testvalue>
+            <testvalue>RPD003</testvalue>
             <value></value>
         </inparam>
         <intemplate></intemplate>
@@ -40,8 +40,8 @@
         <ntlmHost></ntlmHost>
         <outtemplate>{
    "errorMessage": "",
-   "password": "iyadaw",
-   "userName": "MICSBCN"
+   "messageId": "RPD003",
+   "messageText": "لم يتم التعرف على سجلات بحاجة الى تجديد اقامة"
 }</outtemplate>
         <outparam>
             <category></category>
@@ -51,16 +51,16 @@
             <encode>true</encode>
             <format>None</format>
             <formatvalue></formatvalue>
-            <id>userName</id>
+            <id>messageId</id>
             <invalue></invalue>
             <name></name>
             <order></order>
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>userName</source>
+            <source>messageId</source>
             <srcformatvalue></srcformatvalue>
-            <target>response</target>
+            <target></target>
             <targetdatatype></targetdatatype>
             <testvalue></testvalue>
             <value></value>
@@ -73,16 +73,38 @@
             <encode>true</encode>
             <format>None</format>
             <formatvalue></formatvalue>
-            <id>password</id>
+            <id>messageText</id>
             <invalue></invalue>
             <name></name>
             <order></order>
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>password</source>
+            <source>messageText</source>
             <srcformatvalue></srcformatvalue>
-            <target>response</target>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>errorMessage</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>errorMessage</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
             <targetdatatype></targetdatatype>
             <testvalue></testvalue>
             <value></value>
@@ -98,7 +120,7 @@
         <smscode></smscode>
         <smsenabled>false</smsenabled>
         <timeout></timeout>
-        <url>http://172.20.44.162:8080/Metrash2/rest/metrash2/webServiceCredentials?lang=en</url>
+        <url>http://172.20.44.162:8080/Metrash2/rest/metrash2/getMessage?messageId=$messageId&amp;lang=en</url>
         <urlprovider></urlprovider>
         <userid></userid>
     </plainxmlservice>

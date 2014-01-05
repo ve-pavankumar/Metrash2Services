@@ -898,9 +898,9 @@
                 <iphonerc>
                     <left>0</left>
                     <right>0</right>
-                    <top>15</top>
-                    <bottom>7</bottom>
-                    <unit>px</unit>
+                    <top>5</top>
+                    <bottom>3</bottom>
+                    <unit>%</unit>
                 </iphonerc>
                 <iphonerc_override>true</iphonerc_override>
                 <j2me>
@@ -1167,7 +1167,7 @@
                     <right>0</right>
                     <top>0</top>
                     <bottom>0</bottom>
-                    <unit>px</unit>
+                    <unit>%</unit>
                 </iphonerc>
                 <iphonerc_override>true</iphonerc_override>
                 <j2me>
@@ -1552,11 +1552,11 @@
                     </ipad>
                     <ipad_override>false</ipad_override>
                     <iphonerc>
-                        <left>10</left>
-                        <right>3</right>
+                        <left>4</left>
+                        <right>1</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -1823,7 +1823,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -2185,7 +2185,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -2452,7 +2452,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -2898,7 +2898,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -3554,11 +3554,11 @@
                     </ipad>
                     <ipad_override>false</ipad_override>
                     <iphonerc>
-                        <left>3</left>
-                        <right>3</right>
+                        <left>1</left>
+                        <right>1</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -3825,7 +3825,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -4187,7 +4187,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -4454,7 +4454,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -4870,7 +4870,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -5526,11 +5526,11 @@
                     </ipad>
                     <ipad_override>false</ipad_override>
                     <iphonerc>
-                        <left>3</left>
-                        <right>10</right>
+                        <left>1</left>
+                        <right>4</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -5797,7 +5797,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -6159,7 +6159,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -6426,7 +6426,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -6642,6 +6642,32 @@
                         <evtSequence>
                             <actionList xsi:type="eventFunctionAction">
                                 <enabled>true</enabled>
+                                <name></name>
+                                <type>6</type>
+                                <functionName>None</functionName>
+                                <functionNameMap>
+                                    <entry>
+                                        <key>js</key>
+                                        <value>callPersonalResidencyConfigurationService</value>
+                                    </entry>
+                                    <entry>
+                                        <key>lua</key>
+                                        <value>None</value>
+                                    </entry>
+                                </functionNameMap>
+                                <paramDataMap>
+                                    <entry>
+                                        <key>js</key>
+                                        <value/>
+                                    </entry>
+                                    <entry>
+                                        <key>lua</key>
+                                        <value/>
+                                    </entry>
+                                </paramDataMap>
+                            </actionList>
+                            <actionList xsi:type="eventFunctionAction">
+                                <enabled>false</enabled>
                                 <name></name>
                                 <type>6</type>
                                 <functionName>None</functionName>
@@ -6885,7 +6911,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -7547,9 +7573,9 @@
                 <iphonerc>
                     <left>0</left>
                     <right>0</right>
-                    <top>7</top>
-                    <bottom>7</bottom>
-                    <unit>px</unit>
+                    <top>3</top>
+                    <bottom>3</bottom>
+                    <unit>%</unit>
                 </iphonerc>
                 <iphonerc_override>true</iphonerc_override>
                 <j2me>
@@ -7816,7 +7842,7 @@
                     <right>0</right>
                     <top>0</top>
                     <bottom>0</bottom>
-                    <unit>px</unit>
+                    <unit>%</unit>
                 </iphonerc>
                 <iphonerc_override>true</iphonerc_override>
                 <j2me>
@@ -8201,11 +8227,11 @@
                     </ipad>
                     <ipad_override>false</ipad_override>
                     <iphonerc>
-                        <left>10</left>
-                        <right>3</right>
+                        <left>4</left>
+                        <right>1</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -8472,7 +8498,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -8834,7 +8860,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -9101,7 +9127,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -9547,7 +9573,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -10207,7 +10233,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -10470,11 +10496,11 @@
                     </ipad>
                     <ipad_override>false</ipad_override>
                     <iphonerc>
-                        <left>3</left>
-                        <right>3</right>
+                        <left>1</left>
+                        <right>1</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -10836,7 +10862,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -11103,7 +11129,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -11549,7 +11575,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -12205,11 +12231,11 @@
                     </ipad>
                     <ipad_override>false</ipad_override>
                     <iphonerc>
-                        <left>3</left>
-                        <right>10</right>
+                        <left>1</left>
+                        <right>4</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -12476,7 +12502,7 @@
                         <right>0</right>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <unit>px</unit>
+                        <unit>%</unit>
                     </iphonerc>
                     <iphonerc_override>true</iphonerc_override>
                     <j2me>
@@ -12838,7 +12864,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -13105,7 +13131,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>
@@ -13551,7 +13577,7 @@
                             <right>0</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <unit>px</unit>
+                            <unit>%</unit>
                         </iphonerc>
                         <iphonerc_override>true</iphonerc_override>
                         <j2me>

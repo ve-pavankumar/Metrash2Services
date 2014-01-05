@@ -11,16 +11,16 @@ function addWidgetsfrmPersonalResidencyResult() {
     var label195327310678167 = new kony.ui.Label({
         "id": "label195327310678167",
         "isVisible": true,
-        "text": "QID",
+        "text": kony.i18n.getLocalizedString("m.qid"),
         "skin": "lblRed"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 15
     }, {
@@ -35,10 +35,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 85
     }, {
@@ -71,10 +71,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 100
     }, {
@@ -125,10 +125,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "containerWeight": 11,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [10, 10, 10, 0],
+        "margin": [3, 3, 3, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -137,16 +137,16 @@ function addWidgetsfrmPersonalResidencyResult() {
     var lblQidName = new kony.ui.Label({
         "id": "lblQidName",
         "isVisible": true,
-        "text": "QID/Name",
+        "text": kony.i18n.getLocalizedString("m.rrc.result.titleQid"),
         "skin": "lblWhite"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -155,16 +155,16 @@ function addWidgetsfrmPersonalResidencyResult() {
     var lblExpiryDateDisplay = new kony.ui.Label({
         "id": "lblExpiryDateDisplay",
         "isVisible": true,
-        "text": "Expiry Date",
+        "text": kony.i18n.getLocalizedString("m.rrc.result.titleDate"),
         "skin": "lblWhite"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -173,16 +173,16 @@ function addWidgetsfrmPersonalResidencyResult() {
     var lblYear = new kony.ui.Label({
         "id": "lblYear",
         "isVisible": true,
-        "text": "Year",
+        "text": kony.i18n.getLocalizedString("m.rrc.result.titleYear"),
         "skin": "lblWhite"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 20
     }, {
@@ -198,10 +198,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "containerWeight": 7,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 16, 0, 0],
+        "margin": [0, 5, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
@@ -262,7 +262,7 @@ function addWidgetsfrmPersonalResidencyResult() {
         "paddingInPixel": false,
         "containerWeight": 17
     }, {
-        "indicator": constants.SEGUI_ROW_SELECT,
+        "indicator": constants.SEGUI_NONE,
         "enableDictionary": false,
         "showProgressIndicator": true,
         "progressIndicatorColor": constants.PROGRESS_INDICATOR_COLOR_WHITE,
@@ -277,10 +277,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -294,10 +294,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -311,10 +311,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 20
     }, {
@@ -346,10 +346,10 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
+        "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 100
     }, {
@@ -381,14 +381,14 @@ function addWidgetsfrmPersonalResidencyResult() {
         "skin": "lineNormal"
     }, {
         "thickness": 1,
-        "margin": [1, 1, 1, 1],
-        "marginInPixel": true,
+        "margin": [0, 0, 0, 0],
+        "marginInPixel": false,
         "paddingInPixel": false
     }, {});
     var btnPersResidencyDone = new kony.ui.Button({
         "id": "btnPersResidencyDone",
         "isVisible": true,
-        "text": "Done",
+        "text": kony.i18n.getLocalizedString("m.done"),
         "skin": "btnNextNorm",
         "focusSkin": "btnNextFcs",
         "onClick": frmPersonalResidencyResult_btnPersResidencyDone_onClick_seq0
@@ -396,12 +396,12 @@ function addWidgetsfrmPersonalResidencyResult() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -421,8 +421,8 @@ function addWidgetsfrmPersonalResidencyResult() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19284323084890.add(

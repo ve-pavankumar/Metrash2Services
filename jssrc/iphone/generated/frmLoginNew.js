@@ -28,7 +28,7 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [7, 5, 0, 5],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 36
     }, {
@@ -46,7 +46,7 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [7, 5, 0, 5],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 64
     }, {
@@ -66,8 +66,8 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1182816738148707.add(
@@ -79,8 +79,8 @@ function addWidgetsfrmLoginNew() {
     }, {
         "thickness": 1,
         "margin": [0, 0, 0, 0],
-        "marginInPixel": true,
-        "paddingInPixel": true
+        "marginInPixel": false,
+        "paddingInPixel": false
     }, {});
     var label1182816738148710 = new kony.ui.Label({
         "id": "label1182816738148710",
@@ -94,7 +94,7 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [7, 5, 0, 5],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 36
     }, {
@@ -112,7 +112,7 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [7, 5, 0, 5],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 64
     }, {
@@ -130,8 +130,8 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1182816738148708.add(
@@ -145,8 +145,8 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -164,11 +164,11 @@ function addWidgetsfrmLoginNew() {
         "containerWeight": 30,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [10, 20, 10, 0],
+        "margin": [4, 7, 4, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1182816738148705.add(
@@ -185,7 +185,7 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [10, 7, 0, 7],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 100
     }, {
@@ -200,11 +200,11 @@ function addWidgetsfrmLoginNew() {
         "containerWeight": 10,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 25, 0, 0],
+        "margin": [0, 8, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1182816738148996.add(
@@ -221,7 +221,7 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 5, 7, 5],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 35
     }, {
@@ -244,12 +244,12 @@ function addWidgetsfrmLoginNew() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [10, 10, 30, 10],
-        "padding": [0, 0, 0, 0],
+        "margin": [4, 4, 10, 4],
+        "padding": [2, 2, 0, 2],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "containerHeightMode": constants.TEXTBOX_DEFAULT_PLATFORM_HEIGHT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 65
     }, {
         "pasteboardType": constants.TEXTBOX_PASTE_BOARD_TYPE_NO_PASTE_BOARD,
@@ -272,11 +272,11 @@ function addWidgetsfrmLoginNew() {
         "containerWeight": 11,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [10, 0, 10, 0],
+        "margin": [4, 0, 4, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1182816738149022.add(
@@ -292,12 +292,12 @@ function addWidgetsfrmLoginNew() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [6, 5, 0, 5],
+        "margin": [2, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -314,12 +314,12 @@ function addWidgetsfrmLoginNew() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -339,8 +339,8 @@ function addWidgetsfrmLoginNew() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19284323084890.add(

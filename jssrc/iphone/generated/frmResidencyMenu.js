@@ -12,7 +12,11 @@ function frmResidencyMenu_button19320370194647_onClick_seq0(eventobject) {
 };
 
 function frmResidencyMenu_button19320370194651_onClick_seq0(eventobject) {
-    callPersonalRenewalResidencyService.call(this);
+    callPersonalResidencyConfigurationService.call(this);
+    /* 
+callPersonalRenewalResidencyService.call(this);
+
+ */
     /* 
 frmPersonalResidencyInput.show();
 	
@@ -71,8 +75,8 @@ function addWidgetsfrmResidencyMenu() {
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 75
     }, {
         "glowEffect": false,
@@ -90,7 +94,7 @@ function addWidgetsfrmResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_TOP_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 25
     }, {
@@ -102,11 +106,11 @@ function addWidgetsfrmResidencyMenu() {
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 31,
-        "margin": [10, 0, 3, 0],
+        "margin": [4, 0, 1, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -127,8 +131,8 @@ function addWidgetsfrmResidencyMenu() {
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 76
     }, {
         "glowEffect": false,
@@ -146,7 +150,7 @@ function addWidgetsfrmResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_TOP_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 24
     }, {
@@ -158,11 +162,11 @@ function addWidgetsfrmResidencyMenu() {
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 35,
-        "margin": [3, 0, 3, 0],
+        "margin": [1, 0, 1, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -184,8 +188,8 @@ function addWidgetsfrmResidencyMenu() {
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 76
     }, {
         "glowEffect": false,
@@ -203,7 +207,7 @@ function addWidgetsfrmResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_TOP_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 24
     }, {
@@ -215,11 +219,11 @@ function addWidgetsfrmResidencyMenu() {
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 33,
-        "margin": [3, 0, 10, 0],
+        "margin": [1, 0, 4, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -235,11 +239,11 @@ function addWidgetsfrmResidencyMenu() {
         "containerWeight": 21,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 15, 0, 7],
+        "margin": [0, 5, 0, 3],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19320370194643.add(
@@ -259,8 +263,8 @@ function addWidgetsfrmResidencyMenu() {
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 75
     }, {
         "glowEffect": false,
@@ -278,7 +282,7 @@ function addWidgetsfrmResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_TOP_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 25
     }, {
@@ -290,11 +294,11 @@ function addWidgetsfrmResidencyMenu() {
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 31,
-        "margin": [10, 0, 3, 0],
+        "margin": [4, 0, 1, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -316,8 +320,8 @@ function addWidgetsfrmResidencyMenu() {
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 76
     }, {
         "glowEffect": false,
@@ -335,7 +339,7 @@ function addWidgetsfrmResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_TOP_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 24
     }, {
@@ -348,10 +352,10 @@ function addWidgetsfrmResidencyMenu() {
     }, {
         "containerWeight": 36,
         "margin": [0, 0, 0, 0],
-        "padding": [3, 0, 3, 0],
+        "padding": [1, 0, 1, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -373,8 +377,8 @@ function addWidgetsfrmResidencyMenu() {
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 76
     }, {
         "glowEffect": false,
@@ -392,7 +396,7 @@ function addWidgetsfrmResidencyMenu() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 1, 0, 1],
         "contentAlignment": constants.CONTENT_ALIGN_TOP_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 24
     }, {
@@ -404,11 +408,11 @@ function addWidgetsfrmResidencyMenu() {
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "containerWeight": 33,
-        "margin": [3, 0, 10, 0],
+        "margin": [1, 0, 4, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "vExpand": false,
         "hExpand": true,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -424,11 +428,11 @@ function addWidgetsfrmResidencyMenu() {
         "containerWeight": 21,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 7, 0, 7],
+        "margin": [0, 3, 0, 3],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox19320370194834.add(

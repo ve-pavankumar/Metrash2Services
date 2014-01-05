@@ -147,4 +147,5 @@ function skinsInit() {
     btnYear = "btnYear";
     btnCheckbox = "btnCheckbox";
     btnCheckBoxClicked = "btnCheckBoxClicked";
+    testskin = "testskin";
 };

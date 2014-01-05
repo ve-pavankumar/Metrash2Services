@@ -186,7 +186,7 @@
     <attributes name="tcxhtmlbasefontsize" value="10"/>
     <attributes name="project.type" value="js"/>
     <attributes name="ID_CAP_CONTACTS" value="true"/>
-    <attributes name="defaultlocalekey" value="ar_QA"/>
+    <attributes name="defaultlocalekey" value="en_QA"/>
     <attributes name="WRITE_APN_SETTINGS" value="false"/>
     <attributes name="bb10packageid" value=""/>
     <attributes name="CONTROL_LOCATION_UPDATES" value="false"/>
@@ -401,5 +401,5 @@
     <attributes name="APPLICATION_THEME" value="default"/>
     <attributes name="camerasettings" value=""/>
     <attributes name="pathprefixkey" value=""/>
-    <attributes name="defaultlocalekey" value="ar_QA"/>
+    <attributes name="defaultlocalekey" value="en_QA"/>
 </properties>

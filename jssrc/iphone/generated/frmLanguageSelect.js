@@ -1,10 +1,10 @@
 //Form JS File
 function frmLanguageSelect_btnAraLang_onClick_seq0(eventobject) {
-    setArabicLanguage.call(this);
+    changeLocaleToArabic.call(this);
 };
 
 function frmLanguageSelect_btnEngLang_onClick_seq0(eventobject) {
-    setEnglishLanguage.call(this);
+    changeLocaleToEnglish.call(this);
 };
 
 function addWidgetsfrmLanguageSelect() {
@@ -20,7 +20,7 @@ function addWidgetsfrmLanguageSelect() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 0
     }, {
@@ -36,11 +36,11 @@ function addWidgetsfrmLanguageSelect() {
         "percent": false,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "layoutAlignment": constants.BOX_LAYOUT_ALIGN_FROM_CENTER,
-        "margin": [0, 10, 0, 10],
+        "margin": [0, 4, 0, 4],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1177126657101439.add(
@@ -57,7 +57,7 @@ function addWidgetsfrmLanguageSelect() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 0
     }, {
@@ -73,11 +73,11 @@ function addWidgetsfrmLanguageSelect() {
         "percent": false,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "layoutAlignment": constants.BOX_LAYOUT_ALIGN_FROM_CENTER,
-        "margin": [0, 0, 0, 10],
+        "margin": [0, 0, 0, 4],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox1177126657101440.add(
@@ -110,10 +110,10 @@ function addWidgetsfrmLanguageSelect() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
-        "padding": [5, 0, 0, 0],
+        "margin": [0, 0, 0, 0],
+        "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 40
     }, {
@@ -128,10 +128,10 @@ function addWidgetsfrmLanguageSelect() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 1, 1, 1],
-        "padding": [0, 0, 5, 0],
+        "margin": [0, 0, 0, 0],
+        "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
-        "marginInPixel": true,
+        "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 60
     }, {
@@ -166,12 +166,12 @@ function addWidgetsfrmLanguageSelect() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -188,12 +188,12 @@ function addWidgetsfrmLanguageSelect() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": false,
-        "margin": [10, 5, 0, 5],
+        "margin": [4, 2, 0, 2],
         "padding": [0, 0, 0, 0],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "containerWeight": 0
     }, {
         "glowEffect": false,
@@ -214,8 +214,8 @@ function addWidgetsfrmLanguageSelect() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "marginInPixel": true,
-        "paddingInPixel": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hboxcompanyvisa.add(
