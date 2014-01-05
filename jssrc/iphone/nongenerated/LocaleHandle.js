@@ -1,18 +1,20 @@
 function changeLocaleToEnglish() {
-    kony.i18n.setCurrentLocaleAsync("en_QA", onsuccessLocaleChangeToEnglishCallback, onfailiureLocaleChangeCallback, "")
+    if (kony.i18n.getCurrentLocale() != "en") kony.i18n.setCurrentLocaleAsync("en", onsuccessLocaleChangeToEnglishCallback, onfailiureLocaleChangeCallback, "")
+    else frmActivation.show();
 }
 
 function onsuccessLocaleChangeToEnglishCallback() {
-    locale = "en_QA";
+    locale = "en";
     frmActivation.show();
 }
 
 function changeLocaleToArabic() {
-    kony.i18n.setCurrentLocaleAsync("ar_QA", onsuccessLocaleChangeToArabicCallback, onfailiureLocaleChangeCallback, "")
+    if (kony.i18n.getCurrentLocale() != "ar") kony.i18n.setCurrentLocaleAsync("ar", onsuccessLocaleChangeToArabicCallback, onfailiureLocaleChangeCallback, "")
+    else frmActivation.show();
 }
 
 function onsuccessLocaleChangeToArabicCallback() {
-    locale = "ar_QA";
+    locale = "ar";
     frmActivation.show();
 }
 

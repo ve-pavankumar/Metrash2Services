@@ -67,7 +67,7 @@ function onFailure(errorcode, errormsg, info) {
 };
 kony.application.setApplicationMode(constants.APPLICATION_MODE_NATIVE);
 //If default locale is specified. This is set even before any other app life cycle event is called.
-kony.i18n.setDefaultLocaleAsync("en_QA", onSuccess, onFailure, null);
+kony.i18n.setDefaultLocaleAsync("en", onSuccess, onFailure, null);
 // If you wish to debug Application Initialization events, now is the time to
 // place breakpoints.
 debugger;

@@ -102,7 +102,7 @@ function callPersonalResidencyResultCallBack(status, output) {
             }
         } else {
             var basicConf = {
-                message: "Error Code" + output.errorMessage,
+                message: output.errorMessage,
                 alertType: constants.ALERT_TYPE_INFO,
                 alertTitle: "",
                 yesLabel: "OK",
@@ -241,9 +241,9 @@ function getCardExpiryDate() {
 function getLocaleSpecificDisplayValuesForRecidencyRenewalResult(engName, arabicName) {
     //locale="ar_QA";
     var name = "";
-    if (locale == "ar_QA") {
+    if (locale == "ar") {
         name = arabicName;
-    } else if (locale = "en_QA") {
+    } else if (locale = "en") {
         name = engName;
     }
     return name;

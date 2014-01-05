@@ -309,12 +309,12 @@ function getLocaleSpecificDisplayValuesForRecidencyRenewalResult(engName,arabicN
 {
 	//locale="ar_QA";
 	var name="";
-	if(locale=="ar_QA")
+	if(locale=="ar")
 	{
 		name=arabicName;
 		
 	}
-	else if(locale="en_QA")
+	else if(locale="en")
 	{	
 		
 		name=engName;		

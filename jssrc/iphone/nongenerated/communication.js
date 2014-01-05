@@ -328,9 +328,9 @@ function getLocaleSpecificDisplayValuesForSponseredDataSet(dataSet) {
 function getLocaleSpecificDisplayValuesForSponsor(engName, arabicName) {
     //locale="ar_QA";
     var name = "";
-    if (locale == "ar_QA") {
+    if (locale == "ar") {
         name = arabicName;
-    } else if (locale = "en_QA") {
+    } else if (locale = "en") {
         name = engName;
     }
     return name;
@@ -347,10 +347,10 @@ function assignCheckBoxClickForSponseredItems(rejectedCode) {
     var vbxPersResCheckboxEvent = {};
     if (rejectedCode != "") {
         vbxPersResCheckboxEvent = {
-            visible: "false"
+            visible: false
         };
     } else vbxPersResCheckboxEvent = {
-        visible: "true"
+        visible: true
     };
     return vbxPersResCheckboxEvent;
 }
@@ -376,11 +376,11 @@ function assignYearRejectedQID(rejectedCode, bntText) {
     if (rejectedCode != "") {
         yearButtonItem = {
             "text": bntText,
-            visible: "false"
+            visible: false
         };
     } else yearButtonItem = {
         "text": bntText,
-        visible: "true"
+        visible: true
     };
     return yearButtonItem;
 }
