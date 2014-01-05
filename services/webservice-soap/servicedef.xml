@@ -141,7 +141,7 @@
             <config-param name="soap-version" value="1.1"/>
             <config-param name="pwd" value="kgm8yZAr63/dxJJd/USGTA=="/>
             <config-param name="postprocessorname" value=""/>
-            <config-param name="preprocessorname" value=""/>
+            <config-param name="preprocessorname" value="com.kony.processors.Preprocessor"/>
             <config-param name="urlprovider" value=""/>
             <config-param name="dataprovider" value=""/>
             <config-param name="sockettimeout" value=""/>
@@ -187,6 +187,7 @@
                <param datatype="string" encode="true" name="receivingType" sms-name="" src="request" value=""/>
                <param datatype="string" encode="true" name="returnOldDocument" sms-name="" src="request" value=""/>
                <param datatype="string" encode="true" name="sourceType" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="errorMessage" sms-name="" src="request" value=""/>
             </template-param>
          </service-input>
          <service-output>

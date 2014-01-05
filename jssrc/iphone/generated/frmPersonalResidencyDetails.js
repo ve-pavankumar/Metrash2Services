@@ -156,7 +156,7 @@ function addWidgetsfrmPersonalResidencyDetails() {
         "containerWeight": 100,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [3, 0, 3, 0],
+        "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
         "marginInPixel": false,

@@ -111,7 +111,7 @@ function detailsIconClicked(){
     	var segmentData = [
     	{lblPersResKey:kony.i18n.getLocalizedString("m.all.reject.reason"),lblPersResValue:selectedSegmentData.rejectionReason},
 		{lblPersResKey:kony.i18n.getLocalizedString("rr.name"),lblPersResValue:selectedSegmentData.lblName},
-		{lblPersResKey:kony.i18n.getLocalizedString("rr.qid"),lblPersResValue:selectedSegmentData.lblQID},
+		{lblPersResKey:kony.i18n.getLocalizedString("rr.qid"),lblPersResValue:changeQIDSkinToBlack(selectedSegmentData.lblQID)},
 		{lblPersResKey:kony.i18n.getLocalizedString("m.ps.epf.detail.nationality"),lblPersResValue:selectedSegmentData.nationality},
 		{lblPersResKey:kony.i18n.getLocalizedString("rr.relation"),lblPersResValue:selectedSegmentData.relation},
 		{lblPersResKey:kony.i18n.getLocalizedString("rr.sex"),lblPersResValue:selectedSegmentData.sex},
@@ -129,7 +129,7 @@ function detailsIconClicked(){
 	else {
 		var segmentData = [
 		{lblPersResKey:kony.i18n.getLocalizedString("rr.name"),lblPersResValue:selectedSegmentData.lblName},
-		{lblPersResKey:kony.i18n.getLocalizedString("rr.qid"),lblPersResValue:selectedSegmentData.lblQID},
+		{lblPersResKey:kony.i18n.getLocalizedString("rr.qid"),lblPersResValue:changeQIDSkinToBlack(selectedSegmentData.lblQID)},
 		{lblPersResKey:kony.i18n.getLocalizedString("m.ps.epf.detail.nationality"),lblPersResValue:selectedSegmentData.nationality},
 		{lblPersResKey:kony.i18n.getLocalizedString("rr.relation"),lblPersResValue:selectedSegmentData.relation},
 		{lblPersResKey:kony.i18n.getLocalizedString("rr.sex"),lblPersResValue:selectedSegmentData.sex},
@@ -479,7 +479,14 @@ function collectDeliveryDetails(output)
 
 
 
-
+function changeQIDSkinToBlack(data)
+{
+	if(data["skin"])
+	{
+		data["skin"]=lblBlackNor;
+	}
+	return data;
+}
 
 
 

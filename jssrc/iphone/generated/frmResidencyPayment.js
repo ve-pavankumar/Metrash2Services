@@ -347,7 +347,7 @@ function addWidgetsfrmResidencyPayment() {
         "containerWeight": 6,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 0, 0, 0],
+        "margin": [2, 0, 2, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
         "marginInPixel": false,

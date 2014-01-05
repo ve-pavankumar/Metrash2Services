@@ -94,7 +94,7 @@
             <param datatype="string" encode="true" name="cvv2" sms-name="" src="request" value=""/>
          </service-input>
          <service-output>
-            <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="errorCode" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="//errorMessage" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="cardOwnerId" sms-name="" src="//cardOwnerId" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="cardExpDate" sms-name="" src="//cardExpDate" target="response"/>
             <param datatype="string" format="None" formatvalue="" name="pgmId" sms-name="" src="//pgmId" target="response"/>

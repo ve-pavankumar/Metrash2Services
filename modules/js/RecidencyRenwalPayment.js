@@ -78,55 +78,82 @@ function callPaymentService(paymentDetails)
 		 
 	}
 	
-function callPersonalResidencyResultCallBack(status,output)
+	function callPersonalResidencyResultCallBack(status, output)
 	{
-		kony.print ("Entering into callPaymentCallBack");
-		kony.print ("status: " + status);
-		
-		
-		if(null != status && status == 400)
-	 	{
-	 		kony.print ("callPaymentCallBack output: " +output);
-	 		kony.print ("OPSTATUS "+output["opstatus"]);
-	 		if(null != output && null != output["opstatus"] && 0 == output["opstatus"])
-		  	{
-		  		output.errorCode=output.errorCode||"";
-		  		var segmentData=[];
-		  		if(output.errorCode != "")
-		  		{	
-		  			recidencyrenwalObject.paymentDTO=output.paymentResponse;
-		  			if(null != output.responseSet && output.responseSet.length > 0)
-		  			{
-					//output.responseSet=[{"qidNum":"1234","rpExpiryDate":"234","duration":"23","duration":"45"}];
-				  			for(var item in output.responseSet)
-				  			{
-						  			var reseltSet=[];
-						  			var rowItem=output.responseSet[item];
-						  			reseltSet={
-						  						lblPersResQidResult:rowItem.qidNum,
-									  			lblPersResExpDateResult:rowItem.rpExpiryDate,
-									  			lblPersResYearResult:rowItem.duration,
-									  			lblPersResNameResult:getLocaleSpecificDisplayValuesForRecidencyRenewalResult(rowItem.residentEnglishName,rowItem.residentArabicName)
-						  			
-						  						}
-						  			
-					  			segmentData.push(reseltSet);
-					  		}
-					  			frmPersonalResidencyResult.segmentPersResidencyResult.setData(segmentData);
-				  	}	
-				 }
-		  		frmPersonalResidencyResult.show();
-	   		}
-	   		else{
-	  		var basicConf = {message:"Error Code"+output.errcode, alertType:constants.ALERT_TYPE_INFO, alertTitle:"", yesLabel:"OK", noLabel:"", alertHandler:null};
-			var pspConf = {};
-			//var infoAlert = kony.ui.Alert(basicConf,pspConf);
-			showErrorPopup(output.errcode);
-			return;
-	  	}
-		}
+	        kony.print("Entering into callPaymentCallBack");
+	        kony.print("status: " + status);
+
+
+	        if (null != status && status == 400)
+	        {
+	                if (output.errorMessage == "")
+	                {
+	                        kony.print("callPaymentCallBack output: " + output);
+	                        kony.print("OPSTATUS " + output["opstatus"]);
+	                        if (null != output && null != output["opstatus"] && 0 == output["opstatus"])
+	                        {
+
+	                                output.errorCode = output.errorCode || "";
+	                                var segmentData = [];
+	                                if (output.errorCode != "")
+	                                {
+	                                        recidencyrenwalObject.paymentDTO = output.paymentResponse;
+	                                        if (null != output.responseSet && output.responseSet.length > 0)
+	                                        {
+	                                                //output.responseSet=[{"qidNum":"1234","rpExpiryDate":"234","duration":"23","duration":"45"}];
+	                                                for (var item in output.responseSet)
+	                                                {
+	                                                        var reseltSet = [];
+	                                                        var rowItem = output.responseSet[item];
+	                                                        reseltSet = {
+	                                                                lblPersResQidResult: rowItem.qidNum,
+	                                                                lblPersResExpDateResult: rowItem.rpExpiryDate,
+	                                                                lblPersResYearResult: rowItem.duration,
+	                                                                lblPersResNameResult: getLocaleSpecificDisplayValuesForRecidencyRenewalResult(rowItem.residentEnglishName, rowItem.residentArabicName)
+
+	                                                        }
+
+	                                                        segmentData.push(reseltSet);
+	                                                }
+	                                                frmPersonalResidencyResult.segmentPersResidencyResult.setData(segmentData);
+	                                        }
+	                                }
+	                                frmPersonalResidencyResult.show();
+
+
+
+	                        }
+	                        else
+	                        {
+	                                var basicConf = {
+	                                        message: "Error Code" + output.errcode,
+	                                        alertType: constants.ALERT_TYPE_INFO,
+	                                        alertTitle: "",
+	                                        yesLabel: "OK",
+	                                        noLabel: "",
+	                                        alertHandler: null
+	                                };
+	                                var pspConf = {};
+	                                //var infoAlert = kony.ui.Alert(basicConf,pspConf);
+	                                showErrorPopup(output.errcode);
+
+	                        }
+	                }
+	                else
+	                {
+	                        var basicConf = {
+	                                message:output.errorMessage,
+	                                alertType: constants.ALERT_TYPE_INFO,
+	                                alertTitle: "",
+	                                yesLabel: "OK",
+	                                noLabel: "",
+	                                alertHandler: null
+	                        };
+	                        var pspConf = {};
+	                        var infoAlert = kony.ui.Alert(basicConf,pspConf);
+	                }
+	        }
 	}
-	
 function showPaymentConfirmationPopup(){
 
 	var cardNumber = frmResidencyPayment.tbCardNumber.text;

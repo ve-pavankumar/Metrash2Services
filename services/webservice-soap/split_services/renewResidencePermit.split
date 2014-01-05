@@ -671,6 +671,28 @@
             <testvalue>asdf</testvalue>
             <value></value>
         </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>errorMessage</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </inparam>
         <intemplate>&lt;soapenv:Envelope xmlns:ses="http://session.rp3.moi.gov.qa/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
    &lt;soapenv:Header&gt;
       &lt;wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"&gt;
@@ -1624,21 +1646,7 @@
         <ntlmDomain></ntlmDomain>
         <ntlmHost></ntlmHost>
         <operationname>renewResidencePermit</operationname>
-        <outtemplate>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
-   &lt;soapenv:Body&gt;
-      &lt;soapenv:Fault&gt;
-         &lt;faultcode&gt;soapenv:Server&lt;/faultcode&gt;
-         &lt;faultstring&gt;qa.gov.moi.rp3.exceptions.WsException&lt;/faultstring&gt;
-         &lt;detail&gt;
-            &lt;ns2:WsException xmlns:ns2="http://session.rp3.moi.gov.qa/"&gt;
-               &lt;errorCode&gt;RPD003&lt;/errorCode&gt;
-               &lt;errorMessage&gt;NO DATA FOUND FOR THIS SEARCH&lt;/errorMessage&gt;
-            &lt;/ns2:WsException&gt;
-         &lt;/detail&gt;
-      &lt;/soapenv:Fault&gt;
-   &lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;
-</outtemplate>
+        <outtemplate></outtemplate>
         <outputStructure>
             <index>-1</index>
             <order>0</order>
@@ -1872,7 +1880,7 @@
         </outparam>
         <password>iyadaw</password>
         <postclassname></postclassname>
-        <preclassname></preclassname>
+        <preclassname>com.kony.processors.Preprocessor</preclassname>
         <proxyname></proxyname>
         <proxyport></proxyport>
         <proxypwd></proxypwd>

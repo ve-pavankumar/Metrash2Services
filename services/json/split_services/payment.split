@@ -201,14 +201,14 @@
             <encode>true</encode>
             <format>None</format>
             <formatvalue></formatvalue>
-            <id>errorCode</id>
+            <id>errorMessage</id>
             <invalue></invalue>
             <name></name>
             <order></order>
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>errorCode</source>
+            <source>//errorMessage</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>

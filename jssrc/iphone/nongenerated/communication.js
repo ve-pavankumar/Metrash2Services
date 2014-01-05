@@ -114,7 +114,7 @@ function detailsIconClicked() {
             lblPersResValue: selectedSegmentData.lblName
         }, {
             lblPersResKey: kony.i18n.getLocalizedString("rr.qid"),
-            lblPersResValue: selectedSegmentData.lblQID
+            lblPersResValue: changeQIDSkinToBlack(selectedSegmentData.lblQID)
         }, {
             lblPersResKey: kony.i18n.getLocalizedString("m.ps.epf.detail.nationality"),
             lblPersResValue: selectedSegmentData.nationality
@@ -155,7 +155,7 @@ function detailsIconClicked() {
             lblPersResValue: selectedSegmentData.lblName
         }, {
             lblPersResKey: kony.i18n.getLocalizedString("rr.qid"),
-            lblPersResValue: selectedSegmentData.lblQID
+            lblPersResValue: changeQIDSkinToBlack(selectedSegmentData.lblQID)
         }, {
             lblPersResKey: kony.i18n.getLocalizedString("m.ps.epf.detail.nationality"),
             lblPersResValue: selectedSegmentData.nationality
@@ -462,4 +462,11 @@ function collectDeliveryDetails(output) {
     residencyPersonalRenewalDeliveryFeesObject.Qpost.sourceType = output["deliveryDetailsDTO"][0]["sourceType"];
     residencyPersonalRenewalDeliveryFeesObject.Qpost.applierQID = output["deliveryDetailsDTO"][0]["applierQID"];
     residencyPersonalRenewalDeliveryFeesObject.option = "0";
+}
+
+function changeQIDSkinToBlack(data) {
+    if (data["skin"]) {
+        data["skin"] = lblBlackNor;
+    }
+    return data;
 }
